@@ -12,4 +12,52 @@ body {
   margin-left: 7px;
   margin-right: 7px;
   background-color: rgba(47, 46, 46, 0.495);
+  position: relative;
+}
+.try {
+  display: flex;
+  flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin-top: 3px;
+  font-weight: bold;
+}
+.reg {
+  position: absolute;
+  right: 160px;
+  border: 2px solid rgb(9, 7, 7);
+  opacity: 70%;
+  padding: 10px 24px;
+}
+.log {
+  position: absolute;
+  right: 20px;
+  background-color: white;
+  color: black;
+  padding: 10px 24px;
+}
+.suchfeld {
+  border-radius: 40px;
+  border: 2px black solid;
+  // padding: 15px 120px;
+  padding-left: 43px;
+  text-align: start;
+  color: white;
+  background-color: rgba(47, 46, 46, 0.66);
+  width: 350px;
+  height: 50px;
+}
+
+.lupe {
+  position: absolute;
+  z-index: 10;
+}
+.height {
+  height: 700px;
 }
