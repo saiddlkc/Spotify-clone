@@ -25,12 +25,17 @@ async function fetchData(searchArea) {
       const myP = document.createElement("P");
       const myImg = document.createElement("IMG");
       const br = document.createElement("br");
+      const playBtn = document.createElement("button");
+      const stopBtn = document.createElement("BUTTON");
 
       myH.innerText = song.title;
       myP.innerText = song.artist.name;
       myImg.setAttribute("src", song.album.cover_medium);
-      console.log(myH);
-      console.log(myP);
+      playBtn.innerHTML = `<i class="fas fa-play" style="color: #e4e7ec;"></i>`;
+      playBtn.setAttribute("data-src", song.preview);
+      playBtn.addEventListener("click", playSong);
+      stopBtn.innerHTML = `<i class="fas fa-stop" style="color: #e4e7ec;"></i>`;
+      stopBtn.addEventListener("click", stopSong);
 
       myH.classList.add("d-flex");
       myH.classList.add("fontsize");
@@ -38,16 +43,20 @@ async function fetchData(searchArea) {
       myH.classList.add("ms-2");
       myH.classList.add("align-items-end");
       myP.classList.add("ms-2");
+      playBtn.classList.add("btn");
+      stopBtn.classList.add("btn");
       //   myImg.classList.add("");
       myImg.classList.add("img-small");
       miniContainer.appendChild(myImg);
       miniContainer.appendChild(myP);
       miniContainer.appendChild(br);
       miniContainer.appendChild(myH);
+      miniContainer.appendChild(playBtn);
       miniContainer.classList.add("border");
       miniContainer.classList.add("border-subtle");
       miniContainer.classList.add("fontsize");
       miniContainer.classList.add("fixlength");
+      miniContainer.appendChild(stopBtn);
 
       container.appendChild(miniContainer);
     });
@@ -71,3 +80,23 @@ input.addEventListener("keydown", function (e) {
     fetchData(searchArea);
   }
 });
+
+function playSong() {
+  const previewUrl = this.getAttribute("data-src");
+
+  let audioElement = document.getElementById("audio-player");
+  if (!audioElement) {
+    audioElement = document.createElement("AUDIO");
+    audioElement.id = "audio-player";
+    document.body.appendChild(audioElement);
+  }
+  audioElement.src = previewUrl;
+  audioElement.play();
+}
+function stopSong() {
+  const audioElement = document.getElementById("audio-player");
+  if (audioElement) {
+    audioElement.pause();
+    audioElement.currentTime = 0;
+  }
+}
