@@ -13,7 +13,6 @@ body {
   margin-left: 4px;
   margin-right: 4px;
   background-color: rgba(47, 46, 46, 0.495);
-  position: relative;
 }
 
 .try {
@@ -90,4 +89,22 @@ a {
 
 .h-99 {
   height: 99.3%;
+}
+
+#ergebnisse {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fixlength {
+  width: 250px;
+  height: 400px;
+}
+
+.fontsize {
+  font-size: 1.2rem;
+}
+
+.img-small {
+  width: 99%;
 }/*# sourceMappingURL=searchpage.css.map */
