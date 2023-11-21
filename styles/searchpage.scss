@@ -9,8 +9,8 @@ body {
 .navsaid {
   border-radius: 8px;
   margin-top: 7px;
-  margin-left: 7px;
-  margin-right: 7px;
+  margin-left: 4px;
+  margin-right: 4px;
   background-color: rgba(47, 46, 46, 0.495);
   position: relative;
 }
@@ -21,12 +21,6 @@ body {
 a {
   text-decoration: none;
   color: white;
-
-  margin: 10px;
-  border-radius: 20px;
-  padding: 10px 10px;
-  margin-top: 3px;
-  font-weight: bold;
 }
 .reg {
   position: absolute;
@@ -34,24 +28,31 @@ a {
   border: 2px solid rgb(9, 7, 7);
   opacity: 70%;
   padding: 10px 24px;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin-top: 3px;
+  font-weight: bold;
 }
 .log {
   position: absolute;
   right: 20px;
+  border-radius: 20px;
   background-color: white;
   color: black;
   padding: 10px 24px;
   border: 2px solid white;
+  margin-top: 3px;
+  font-weight: bold;
 }
 .suchfeld {
   border-radius: 40px;
   border: 2px black solid;
-  // padding: 15px 120px;
   padding-left: 43px;
   text-align: start;
   color: white;
   background-color: rgba(47, 46, 46, 0.66);
-  width: 350px;
+  width: 360px;
   height: 50px;
 }
 
@@ -60,5 +61,21 @@ a {
   z-index: 10;
 }
 .height {
-  height: 700px;
+  height: 100vh;
+  width: 100vw;
+}
+.fs-small {
+  font-size: smaller;
+}
+.w-20 {
+  width: 22vw;
+}
+.w-80 {
+  width: 78vw;
+}
+.box {
+  background-color: rgba(47, 46, 46, 0.495);
+}
+.h-99 {
+  height: 99.3%;
 }
