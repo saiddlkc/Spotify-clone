@@ -1,6 +1,6 @@
+import keys from "../key.js";
 const input = document.getElementById("suche");
 console.log(input);
-
 // Function to handle both change and Enter key press
 async function fetchData(searchArea) {
   try {
@@ -8,8 +8,8 @@ async function fetchData(searchArea) {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "55af72b14emsh898860a4d9a021dp18af58jsn88df01865c54",
-        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+        "X-RapidAPI-Key": keys.key,
+        "X-RapidAPI-Host": keys.host,
       },
     };
 
