@@ -2,13 +2,133 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f143cb399b.js" crossorigin="anonymous"></script>
+  <title>Dastify</title>
 </head>
 
 <body>
 
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid" style="background-color: #000000;">
+      <span class="navbar-brand mb-0 h1" style="color: white;"><i class="fa-brands fa-spotify"
+          style="color: white;"></i>Dastify</span>
+    </div>
+  </nav>
+
+
+
+  <section class="vh-100" style="background-color: #000000;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+
+              <h3 class="mb-5">Bei Spotify anmelden</h3>
+
+              <button class="btn btn-lg btn-block btn-primary mb-2" type="submit"><i class="fab fa-google me-2"></i>
+                Weiter mit Google</button>
+              <button class="btn btn-lg btn-block btn-primary mb-2" type="submit"><i
+                  class="fab fa-facebook-f me-2"></i>Weiter mit Facebook</button>
+              <button class="btn btn-lg btn-block btn-primary mb-2" type="submit"><i
+                  class="fab fa-facebook-f me-2"></i>Weiter mit Apple</button>
+
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typeEmailX-2">E-Mail-Adresse oder Benutzername</label>
+                <input type="email" id="typeEmailX-2" class="form-control form-control-lg"
+                  placeholder="E-Mail-Adresse oder Benutzername" />
+
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2">Passwort</label>
+                <input type="password" id="typePasswordX-2" class="form-control form-control-lg"
+                  placeholder="Passwort" />
+              </div>
+
+
+              <div class="form-check d-flex justify-content-start mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                <label class="form-check-label" for="form1Example3"> Remember password </label>
+              </div>
+
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Anmelden</button>
+
+              <hr class="my-4">
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto"> Diese Website ist mit
+      reCAPTCHA geschützt. Es gelten die Datenschutzrichtlinie und Nutzungsbedingungen von Google.</p>
+  </footer>
+
 </body>
+<script>
+
+  let users = [
+    { username: "example@gmail.com", password: "Pass1234" },
+    { username: "john_doe", password: "Secret12" }
+  ];
+
+  function saveUsersToLocalStorage() {
+    localStorage.setItem('users', JSON.stringify(users));
+  }
+
+
+  document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+
+    if (!username || !password) {
+      document.getElementById("errorText").innerText = "Error: Füllen Sie alle Felder aus.";
+      return;
+    }
+
+
+    const eightCharacters = password.length >= 8;
+    const hasNumber = /\d/.test(password);
+    const hasUpperCase = /[A-Z]/.test(password);
+
+    if (!(eightCharacters && hasNumber && hasUpperCase)) {
+      document.getElementById("errorText").innerText = "Error:Das Passwort muss aus mindestens 8 Zeichen bestehen, einschließlich Zahlen und Großbuchstaben.";
+      return;
+    }
+
+
+    const userExists = users.some(user => user.username === username);
+    if (userExists) {
+      document.getElementById("errorText").innerText = "Der Benutzer existiert bereits.";
+      return;
+    }
+
+
+    users.push({ username, password });
+
+    saveUsersToLocalStorage();
+
+    
+     window.location.href = 'https://open.spotify.com/intl-de';
+
+  });
+</script>
 
 </html>
