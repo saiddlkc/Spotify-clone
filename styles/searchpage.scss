@@ -5,6 +5,7 @@
 
 body {
   background-color: black;
+  font-family: "Montserrat", sans-serif;
 }
 .navsaid {
   border-radius: 8px;
@@ -84,10 +85,14 @@ a {
 }
 .fixlength {
   width: 250px;
-  height: 400px;
+  height: 420px;
 }
 .fontsize {
   font-size: 1.2rem;
+  padding: 9px;
+  border-radius: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 .img-small {
   width: 99%;
@@ -98,4 +103,57 @@ a {
   color: white;
   background-color: rgba(4, 4, 5, 0.813);
   margin-left: 5px;
+}
+.suchfeld:focus {
+  outline: 3px solid white;
+}
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background-color: black;
+}
+.box-shadow:hover {
+  box-shadow: rgba(40, 43, 47, 0.605) 0px 20px 30px -10px;
+  background-color: rgba(84, 89, 95, 0.605);
+  transition: 1s;
+}
+.img-round {
+  border-radius: 20px;
+}
+#scrollen {
+  position: relative;
+}
+
+.scrollen {
+  overflow-y: auto;
+  height: 90vh;
+}
+.fav-btn {
+  background-color: red;
+}
+.scrollen::-webkit-scrollbar {
+  width: 0.1em; /* Breite der Scrollbar */
+}
+
+.scrollen::-webkit-scrollbar-thumb {
+  background-color: none; /* Farbe des Scrollbar-Thumb */
+  outline: none; /* Umriss des Scrollbar-Thumb */
+}
+
+.scrollen::-webkit-scrollbar-track {
+  background-color: none; /* Hintergrundfarbe des Scrollbar-Tracks */
+}
+footer {
+  width: 99vw;
+  height: 150px;
+  border: 2px red solid;
+  background-color: rgba(47, 46, 46, 0.495);
+  align-items: end;
+  border-radius: 20px;
+}
+.player {
+  width: 40px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
 }
