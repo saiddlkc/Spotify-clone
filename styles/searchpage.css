@@ -93,8 +93,8 @@ a {
 }
 
 #ergebnisse {
-  display: flex;
   flex-wrap: wrap;
+  padding-bottom: 70px;
 }
 
 .fixlength {
@@ -133,7 +133,7 @@ a {
 
 .box-shadow:hover {
   box-shadow: rgba(40, 43, 47, 0.605) 0px 20px 30px -10px;
-  background-color: rgba(84, 89, 95, 0.605);
+  background-color: rgba(8, 8, 8, 0.315);
   transition: 1s;
 }
 
@@ -168,12 +168,12 @@ a {
 }
 
 footer {
-  width: 99vw;
-  height: 150px;
-  border: 2px red solid;
-  background-color: rgba(47, 46, 46, 0.495);
+  width: 100vw;
+  height: 90px;
+  background-color: rgb(0, 0, 0);
   align-items: end;
-  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
 }
 
 .player {
@@ -181,4 +181,23 @@ footer {
   background-color: black;
   color: white;
   font-size: 20px;
+  margin: 5px;
+}
+
+.player-btn {
+  border: none;
+  margin: 30px;
+}
+
+.player-btn:hover {
+  transform: scale(1.2);
+}
+
+.fs-6 {
+  font-size: 6px;
+}
+
+a:hover {
+  opacity: 100% !important;
+  transform: scale(0.99);
 }/*# sourceMappingURL=searchpage.css.map */

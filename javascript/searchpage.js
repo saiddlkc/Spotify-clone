@@ -34,7 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
         myP.innerText = song.artist.name;
         myImg.setAttribute("src", song.album.cover_medium);
         playBtn.innerHTML = `<i class="fas fa-play" style="color: #e4e7ec;"></i>`;
+        playBtn.setAttribute("id", "play");
         playBtn.setAttribute("data-src", song.preview);
+        playBtn.addEventListener("click", playing);
         playBtn.addEventListener("click", playSong);
         stopBtn.innerHTML = `<i class="fas fa-stop" style="color: #e4e7ec;"></i>`;
         stopBtn.addEventListener("click", stopSong);
@@ -45,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
         myH.classList.add("flex-wrap");
         myH.classList.add("ms-2");
         myH.classList.add("align-items-end");
+        myH.classList.add("text-white");
+        myP.classList.add("text-white-50");
         myP.classList.add("ms-2");
         favBtn.classList.add("fav-btn");
         favBtn.classList.add("btn");
@@ -108,6 +112,26 @@ document.addEventListener("DOMContentLoaded", function () {
       audioElement.pause();
     }
   }
+
+  function playing() {
+    let playerBtn = document.getElementById("play");
+    let isPlaying = false;
+
+    if (playerBtn) {
+      playerBtn.addEventListener("click", function () {
+        if (isPlaying) {
+          playerBtn.innerHTML = `<i class="fas fa-play"></i>`;
+          playSong();
+        } else {
+          playerBtn.innerHTML = `<i class="fas fa-stop"></i>`;
+          stopSong();
+        }
+        isPlaying = !isPlaying;
+      });
+    }
+  }
+
+  playing();
 
   function handleClick(e) {
     const clickedBtn = e.currentTarget;
