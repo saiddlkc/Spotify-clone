@@ -32,7 +32,7 @@
             </div>
             <!-- unten links die box für Biblio liebsongs usw-->
             <div class="w-20 h-100 flex-wrap">
-                <nav class="navsaid nav flex-column w-20 h-75">
+                <nav class="navsaid nav flex-column w-20 mx">
                     <div class="">
                         <a class="nav-link text-white opacity-50 mt-3" href="#">
                             <i class="fa-solid fa-book mx-3"></i>Bibliothek
@@ -57,18 +57,18 @@
             <div>
                 <nav class=" navbar w-100 py-0 justify-content-between" flex-column data-bs-theme="dark">
 
-                    <form class="d-flex align-items-center mx-5 " role="search">
+                    <form class="d-flex align-items-center mx-5" role="search">
                         <i class="fa-solid fa-magnifying-glass mx-3 lupe text-white"></i>
                         <input id="suche" class="suchfeld form-control me-3 " type="search"
                             placeholder="Was hören wir heute?" aria-label="Search">
 
-                        <a class="reg a" href="">Registrieren</a>
-                        <a class="log a" href="">Anmelden</a>
+                        <a class="none reg a" href="">Registrieren</a>
+                        <a class="none log a" href="">Anmelden</a>
                     </form>
                 </nav>
             </div>
-            <div id="scrollen" class="mx-2 h-75">
-                <div class="scrollen navsaid  flex-column w-100">
+            <div id="scrollen" class="mx-2 mh">
+                <div class="scrollen navsaid  flex-column w-100 mh">
                     <div id="ergebnisse" class="d-flex gap-2 justify-content-center
                     "></div>
                 </div>
@@ -76,16 +76,17 @@
         </div>
     </div>
     <!-- MEDIA PLAYER IM FOOTER -->
-    <footer class="d-flex justify-content-between ">
+    <footer class="d-flex justify-content-between position-fixed align-items-center">
         <footer class="d-flex justify-content-between">
-            <div class="d-flex justify-content-start media-all">
-                <img id="selectedImage" class="ms-3 media-img"
+            <div class="d-flex justify-content-start media-all mb-1">
+                <img id="selectedImage" class="ms-3 mt-3 media-img"
                     src="https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg" alt="">
                 <div class="ms-3 d-flex">
                     <h3 id="selectedTitle" class="text-white"></h3>
-                    <p id="selectedArtist" class="text-white-50 fs-6 mt-2 text"></p>
+                    <p id="selectedArtist" class="text-white-50 fs-6 mt-4 text"></p>
                 </div>
-                <div><button class="back player player-btn"><i class="fs-6 fa-solid fa-heart"></i></button></div>
+                <div class="none"><button class="back player player-btn"><i class="fs-6 fa-solid fa-heart"></i></button>
+                </div>
             </div>
             <div class="d-flex ">
                 <button class="back player player-btn"><i class="fa-solid fa-shuffle"></i></button>
@@ -96,7 +97,7 @@
                 <button class="back player player-btn"><i class="fa-solid fa-repeat"></i></button>
             </div>
             <div class="d-flex justify-content-end">
-                <div>
+                <div class="none">
 
                     <button class="back player player-btn"><i class="fs-6 fa-solid fa-music"></i></button>
                     <button class="back player player-btn"><i class="fs-6 fa-solid fa-desktop"></i></button>

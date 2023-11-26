@@ -94,7 +94,7 @@ a {
 
 #ergebnisse {
   flex-wrap: wrap;
-  padding-bottom: 70px;
+  padding-bottom: 350px;
 }
 
 .fixlength {
@@ -213,4 +213,17 @@ a:hover {
 .media-all {
   width: 150px;
   height: 100px;
+}
+
+@media screen and (max-width: 925px) {
+  .none {
+    display: none;
+  }
+}
+.mh {
+  height: 1108px;
+}
+
+.mx {
+  height: 1026px;
 }/*# sourceMappingURL=searchpage.css.map */
