@@ -1,7 +1,7 @@
 import keys from "../key.js";
 const input = document.getElementById("suche");
 
-let selectedBtn = null; // Track the currently selected button
+let selectedBtn = null;
 
 document.addEventListener("DOMContentLoaded", function () {
   async function fetchData(searchArea) {
@@ -29,14 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const playBtn = document.createElement("button");
         const stopBtn = document.createElement("BUTTON");
         const favBtn = document.createElement("BUTTON");
-
+        console.log(song);
         myH.innerText = song.title;
         myP.innerText = song.artist.name;
         myImg.setAttribute("src", song.album.cover_medium);
         playBtn.innerHTML = `<i class="fas fa-play" style="color: #e4e7ec;"></i>`;
         playBtn.setAttribute("id", "play");
         playBtn.setAttribute("data-src", song.preview);
-        playBtn.addEventListener("click", playing);
         playBtn.addEventListener("click", playSong);
         stopBtn.innerHTML = `<i class="fas fa-stop" style="color: #e4e7ec;"></i>`;
         stopBtn.addEventListener("click", stopSong);
@@ -68,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         container.appendChild(miniContainer);
       });
-      // Add event listeners for dynamically created elements here
       const dynamicFavBtns = document.querySelectorAll(".fav-btn");
       dynamicFavBtns.forEach((btn) => {
         btn.addEventListener("click", handleClick);
@@ -96,6 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function playSong() {
     const previewUrl = this.getAttribute("data-src");
+    const selectedArtist = this.previousSibling.innerText;
+    const selectedTitle = this.previousSibling.previousSibling.innerText;
+    const selectedImage = this.parentElement.firstChild.src;
+    console.log(previewUrl);
+
+    document.getElementById("selectedArtist").innerText = selectedArtist;
+    document.getElementById("selectedTitle").innerText = selectedTitle;
+    document.getElementById("selectedImage").src = selectedImage;
+
     let audioElement = document.getElementById("audio-player");
     if (!audioElement) {
       audioElement = document.createElement("AUDIO");
@@ -140,9 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (selectedBtn) {
         selectedBtn.style.backgroundColor = "green";
       }
-      // Update the currently selected button
       selectedBtn = clickedBtn;
-      // Set the style for the clicked button
       clickedBtn.style.backgroundColor = "green";
     }
   }

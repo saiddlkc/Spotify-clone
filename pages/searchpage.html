@@ -32,7 +32,7 @@
             </div>
             <!-- unten links die box für Biblio liebsongs usw-->
             <div class="w-20 h-100 flex-wrap">
-                <nav class="navsaid nav flex-column w-20 h-99">
+                <nav class="navsaid nav flex-column w-20 h-75">
                     <div class="">
                         <a class="nav-link text-white opacity-50 mt-3" href="#">
                             <i class="fa-solid fa-book mx-3"></i>Bibliothek
@@ -67,50 +67,50 @@
                     </form>
                 </nav>
             </div>
-            <div id="scrollen" class="mx-2 h-100 scrollen">
-                <div class="scrollen navsaid  flex-column w-100 h-99">
+            <div id="scrollen" class="mx-2 h-75">
+                <div class="scrollen navsaid  flex-column w-100">
                     <div id="ergebnisse" class="d-flex gap-2 justify-content-center
                     "></div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- MEDIA PLAYER IM FOOTER -->
     <footer class="d-flex justify-content-between ">
-        <div class=" d-flex justify-content-start ">
-            <img class="ms-3"
-                src="https://e-cdns-images.dzcdn.net/images/cover/033a271b5ec10842c287827c39244fb5/60x80-000000-80-0-0.jpg"
-                alt="">
-            <div class="ms-3 d-flex  align-items-start flex-column">
-                <p class="text-white-50 fs-6 mt-2">Linkin Park</p>
-                <h3 class="text-white">In the End</h3>
+        <footer class="d-flex justify-content-between">
+            <div class="d-flex justify-content-start media-all">
+                <img id="selectedImage" class="ms-3 media-img"
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg" alt="">
+                <div class="ms-3 d-flex">
+                    <h3 id="selectedTitle" class="text-white"></h3>
+                    <p id="selectedArtist" class="text-white-50 fs-6 mt-2 text"></p>
+                </div>
+                <div><button class="back player player-btn"><i class="fs-6 fa-solid fa-heart"></i></button></div>
             </div>
+            <div class="d-flex ">
+                <button class="back player player-btn"><i class="fa-solid fa-shuffle"></i></button>
 
-            <div><button class="back player player-btn"><i class="fs-6 fa-solid fa-heart"></i></button></div>
-        </div>
-        <div class="d-flex ">
-            <button class="back player player-btn"><i class="fa-solid fa-shuffle"></i></button>
-
-            <button id="back" class="back player player-btn"><i class=" fa-solid fa-backward"></i></button>
-            <button id="play" class="play player player-btn "><i class="fa-solid fa-play"></i></button>
-            <button id="for" class="for player player-btn "><i class="fa-solid fa-forward"></i></button>
-            <button class="back player player-btn"><i class="fa-solid fa-repeat"></i></button>
-        </div>
-        <div class="d-flex justify-content-end">
-            <div>
-
-                <button class="back player player-btn"><i class="fs-6 fa-solid fa-music"></i></button>
-                <button class="back player player-btn"><i class="fs-6 fa-solid fa-desktop"></i></button>
-                <button class="back player player-btn"><i class="fs-6 fa-solid fa-volume-low"></i></button>
-
+                <button id="back" class="back player player-btn"><i class=" fa-solid fa-backward"></i></button>
+                <button id="play" class="play player player-btn "><i class="fa-solid fa-play"></i></button>
+                <button id="for" class="for player player-btn "><i class="fa-solid fa-forward"></i></button>
+                <button class="back player player-btn"><i class="fa-solid fa-repeat"></i></button>
             </div>
-        </div>
-    </footer>
+            <div class="d-flex justify-content-end">
+                <div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/7a0ba6b588.js" crossorigin="anonymous"></script>
-    <script type="module" src="/javascript/searchpage.js"></script>
+                    <button class="back player player-btn"><i class="fs-6 fa-solid fa-music"></i></button>
+                    <button class="back player player-btn"><i class="fs-6 fa-solid fa-desktop"></i></button>
+                    <button class="back player player-btn"><i class="fs-6 fa-solid fa-volume-low"></i></button>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7a0ba6b588.js" crossorigin="anonymous"></script>
+        <script type="module" src="/javascript/searchpage.js"></script>
 </body>
 
 </html>

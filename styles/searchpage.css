@@ -89,7 +89,7 @@ a {
 }
 
 .h-99 {
-  height: 99.3%;
+  height: 21.3vh;
 }
 
 #ergebnisse {
@@ -134,7 +134,7 @@ a {
 .box-shadow:hover {
   box-shadow: rgba(40, 43, 47, 0.605) 0px 20px 30px -10px;
   background-color: rgba(8, 8, 8, 0.315);
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .img-round {
@@ -200,4 +200,17 @@ footer {
 a:hover {
   opacity: 100% !important;
   transform: scale(0.99);
+}
+
+.media-img {
+  width: 100px;
+  height: 80px;
+  background-color: black;
+  border: none;
+  background-image: url();
+}
+
+.media-all {
+  width: 150px;
+  height: 100px;
 }/*# sourceMappingURL=searchpage.css.map */
