@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const selectedDataArray = JSON.parse(storedData);
       const reversedArray = selectedDataArray.reverse();
-      // Anzeigen aller ausgewählten Daten auf der anderen Seite
+
       const displayDiv = document.getElementById("displayData");
       displayDiv.classList.add("justify-content-start");
       displayDiv.classList.add("d-flex");
@@ -41,10 +41,26 @@ document.addEventListener("DOMContentLoaded", function () {
         xBtn.innerHTML = `<i class="fa-solid fa-x"></i>`;
         xBtn.classList.add("xbtn");
 
+        xBtn.addEventListener("click", function () {
+          div.remove();
+
+          selectedDataArray.splice(0 - 1);
+          localStorage.removeItem(selectedData.value);
+
+          localStorage.setItem(
+            "selectedData",
+            JSON.stringify(selectedDataArray)
+          );
+
+          console.log(
+            "Element gelöscht und Daten aktualisiert:",
+            selectedDataArray
+          );
+        });
+
         function playSong() {
           const previewUrl = this.getAttribute("data-src");
           const selectedArtist = this.previousSibling.innerText;
-
           const selectedImage =
             this.parentElement.querySelector(".img-small").src;
 

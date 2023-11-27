@@ -24,7 +24,7 @@
                         <a class="nav-link text-white opacity-50" href="#">
                             <i class="fa-solid fa-house mx-3"></i><span class="noney">Start</span>
                         </a>
-                        <a class="nav-link text-white opacity-50" href="searchpage.html">
+                        <a class="nav-link text-white opacity-50" href="searchpage.html" target="_blank">
                             <i class="fa-solid fa-magnifying-glass mx-3"></i><span class="noney">Suchen</span>
                         </a>
                     </nav>
@@ -57,14 +57,13 @@
             <div>
                 <nav class=" navbar w-100 py-0 justify-content-between" flex-column data-bs-theme="dark">
 
-                    <form class="d-flex align-items-center mx-5" role="search">
-                        <i class="fa-solid fa-magnifying-glass mx-3 lupe text-white"></i>
-                        <input id="suche" class="suchfeld form-control me-3 " type="search"
-                            placeholder="Was hören wir heute?" aria-label="Search">
-
-                        <a class="none reg a" href="">Registrieren</a>
-                        <a class="none log a" href="">Anmelden</a>
+                    <form class="d-flex align-items-center mx-5 only text" role="search">
+                        <input id="suche" class="cursor-none suchfeld form-control me-3 text"
+                            placeholder="Hier findest du deine Lieblingssongs" readonly>
                     </form>
+
+                    <a class=" none reg a" href="">Registrieren</a>
+                    <a class="none log a" href="">Anmelden</a>
                 </nav>
             </div>
             <div id="scrollen" class="mx-2 mh">

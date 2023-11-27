@@ -124,14 +124,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleClick(e) {
     const clickedBtn = e.currentTarget;
-    console.log(clickedBtn);
-    console.log(selectedBtn);
 
     if (selectedBtn !== clickedBtn) {
       selectedBtn = clickedBtn;
       clickedBtn.style.backgroundColor = "green";
 
-      // Artist, Title und Image aus den Vorgängerelementen abrufen
       const selectedArtist =
         clickedBtn.parentElement.querySelector("p").innerText;
       const selectedTitle =
