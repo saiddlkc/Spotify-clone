@@ -142,6 +142,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
   playing();
 
+  // function handleClick(e) {
+  //   const clickedBtn = e.currentTarget;
+
+  //   if (selectedBtn !== clickedBtn) {
+  //     if (selectedBtn) {
+  //       selectedBtn.style.backgroundColor = "green";
+  //     }
+  //     selectedBtn = clickedBtn;
+  //     clickedBtn.style.backgroundColor = "green";
+
+  //     // Artist, Title und Image aus den Vorgängerelementen abrufen
+  //     const selectedArtist =
+  //       clickedBtn.parentElement.querySelector("p").innerText;
+  //     const selectedTitle =
+  //       clickedBtn.parentElement.querySelector("h4").innerText;
+  //     const selectedImage = clickedBtn.parentElement.querySelector("img").src;
+
+  //     // Überprüfen, ob Artist und Title nicht leer sind, bevor sie gespeichert werden
+  //     if (selectedArtist && selectedTitle) {
+  //       const selectedData = {
+  //         artist: selectedArtist,
+  //         title: selectedTitle,
+  //         image: selectedImage,
+  //       };
+
+  //       // Speichern der Daten im Local Storage
+  //       localStorage.setItem("selectedData", JSON.stringify(selectedData));
+  //     }
+  //   }
+  // }
   function handleClick(e) {
     const clickedBtn = e.currentTarget;
 
@@ -158,18 +188,25 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedTitle =
         clickedBtn.parentElement.querySelector("h4").innerText;
       const selectedImage = clickedBtn.parentElement.querySelector("img").src;
+      const selectedButton =
+        clickedBtn.parentElement.querySelector("button").src;
 
-      // Überprüfen, ob Artist und Title nicht leer sind, bevor sie gespeichert werden
-      if (selectedArtist && selectedTitle) {
-        const selectedData = {
-          artist: selectedArtist,
-          title: selectedTitle,
-          image: selectedImage,
-        };
+      // Abrufen der vorhandenen Daten aus dem Local Storage oder Initialisieren eines leeren Arrays
+      const storedData = localStorage.getItem("selectedData");
+      const existingData = storedData ? JSON.parse(storedData) : [];
 
-        // Speichern der Daten im Local Storage
-        localStorage.setItem("selectedData", JSON.stringify(selectedData));
-      }
+      // Hinzufügen der neuen Auswahl zu den vorhandenen Daten
+      const newSelection = {
+        artist: selectedArtist,
+        title: selectedTitle,
+        image: selectedImage,
+        audio: selectedButton,
+      };
+
+      existingData.push(newSelection);
+
+      // Speichern des aktualisierten Arrays im Local Storage
+      localStorage.setItem("selectedData", JSON.stringify(existingData));
     }
   }
 });
