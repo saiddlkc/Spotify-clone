@@ -107,8 +107,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!audioElement) {
       audioElement = document.createElement("AUDIO");
       audioElement.id = "audio-player";
+
       document.body.appendChild(audioElement);
     }
+    audioElement.volume = 0.02;
     audioElement.src = previewUrl;
     audioElement.play();
   }
@@ -149,6 +151,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       selectedBtn = clickedBtn;
       clickedBtn.style.backgroundColor = "green";
+
+      // Artist, Title und Image aus den Vorgängerelementen abrufen
+      const selectedArtist =
+        clickedBtn.parentElement.querySelector("p").innerText;
+      const selectedTitle =
+        clickedBtn.parentElement.querySelector("h4").innerText;
+      const selectedImage = clickedBtn.parentElement.querySelector("img").src;
+
+      // Überprüfen, ob Artist und Title nicht leer sind, bevor sie gespeichert werden
+      if (selectedArtist && selectedTitle) {
+        const selectedData = {
+          artist: selectedArtist,
+          title: selectedTitle,
+          image: selectedImage,
+        };
+
+        // Speichern der Daten im Local Storage
+        localStorage.setItem("selectedData", JSON.stringify(selectedData));
+      }
     }
   }
 });

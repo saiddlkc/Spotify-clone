@@ -196,3 +196,24 @@ a:hover {
 .mx {
   height: 1026px;
 }
+@media screen and (max-width: 559px) {
+  .noney {
+    display: none;
+  }
+  .fa-solid {
+    font-size: 25px;
+  }
+  .fa-brands {
+    font-size: 25px;
+  }
+  .mx {
+    height: 1017px;
+  }
+  .mh {
+    padding-right: 6px;
+  }
+}
+.lieb {
+  color: white;
+  font-size: 16px;
+}
