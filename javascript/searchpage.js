@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const playBtn = document.createElement("button");
         const stopBtn = document.createElement("BUTTON");
         const favBtn = document.createElement("BUTTON");
-        console.log(song);
+
         myH.innerText = song.title;
         myP.innerText = song.artist.name;
         myImg.setAttribute("src", song.album.cover_medium);
@@ -122,63 +122,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function playing() {
-    let playerBtn = document.getElementById("play");
-    let isPlaying = false;
-
-    if (playerBtn) {
-      playerBtn.addEventListener("click", function () {
-        if (isPlaying) {
-          playerBtn.innerHTML = `<i class="fas fa-play"></i>`;
-          playSong();
-        } else {
-          playerBtn.innerHTML = `<i class="fas fa-stop"></i>`;
-          stopSong();
-        }
-        isPlaying = !isPlaying;
-      });
-    }
-  }
-
-  playing();
-
-  // function handleClick(e) {
-  //   const clickedBtn = e.currentTarget;
-
-  //   if (selectedBtn !== clickedBtn) {
-  //     if (selectedBtn) {
-  //       selectedBtn.style.backgroundColor = "green";
-  //     }
-  //     selectedBtn = clickedBtn;
-  //     clickedBtn.style.backgroundColor = "green";
-
-  //     // Artist, Title und Image aus den Vorgängerelementen abrufen
-  //     const selectedArtist =
-  //       clickedBtn.parentElement.querySelector("p").innerText;
-  //     const selectedTitle =
-  //       clickedBtn.parentElement.querySelector("h4").innerText;
-  //     const selectedImage = clickedBtn.parentElement.querySelector("img").src;
-
-  //     // Überprüfen, ob Artist und Title nicht leer sind, bevor sie gespeichert werden
-  //     if (selectedArtist && selectedTitle) {
-  //       const selectedData = {
-  //         artist: selectedArtist,
-  //         title: selectedTitle,
-  //         image: selectedImage,
-  //       };
-
-  //       // Speichern der Daten im Local Storage
-  //       localStorage.setItem("selectedData", JSON.stringify(selectedData));
-  //     }
-  //   }
-  // }
   function handleClick(e) {
     const clickedBtn = e.currentTarget;
+    console.log(clickedBtn);
+    console.log(selectedBtn);
 
     if (selectedBtn !== clickedBtn) {
-      if (selectedBtn) {
-        selectedBtn.style.backgroundColor = "green";
-      }
       selectedBtn = clickedBtn;
       clickedBtn.style.backgroundColor = "green";
 
@@ -188,8 +137,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedTitle =
         clickedBtn.parentElement.querySelector("h4").innerText;
       const selectedImage = clickedBtn.parentElement.querySelector("img").src;
-      const selectedButton =
-        clickedBtn.parentElement.querySelector("button").src;
+      const selectedAudio = clickedBtn.parentElement
+        .querySelector("button")
+        .getAttribute("data-src");
 
       // Abrufen der vorhandenen Daten aus dem Local Storage oder Initialisieren eines leeren Arrays
       const storedData = localStorage.getItem("selectedData");
@@ -200,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
         artist: selectedArtist,
         title: selectedTitle,
         image: selectedImage,
-        audio: selectedButton,
+        audio: selectedAudio,
       };
 
       existingData.push(newSelection);

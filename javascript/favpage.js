@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (storedData) {
     try {
       const selectedDataArray = JSON.parse(storedData);
-
+      const reversedArray = selectedDataArray.reverse();
       // Anzeigen aller ausgewählten Daten auf der anderen Seite
       const displayDiv = document.getElementById("displayData");
       displayDiv.classList.add("justify-content-start");
@@ -14,16 +14,74 @@ document.addEventListener("DOMContentLoaded", function () {
       displayDiv.classList.add("m-2");
 
       selectedDataArray.forEach((selectedData) => {
+        const xBtn = document.createElement("button");
         const div = document.createElement("div");
-        div.classList.add("box-shadow");
-        div.classList.add("fontsize");
-        div.innerHTML = `
-            <img src="${selectedData.image}" alt="Selected Image">
-            <p class="lieb">${selectedData.artist}</p>
-            <p class="lieb">${selectedData.title}</p>
-            `;
-        // <button data-src="${selectedButton}" class="btn">P</button>
+        const img = document.createElement("img");
+        const artistParagraph = document.createElement("p");
+        const titleParagraph = document.createElement("p");
+        const playButton = document.createElement("button");
+        const stopButton = document.createElement("button");
+        img.src = selectedData.image;
+        img.classList.add("img-small");
+        artistParagraph.classList.add("text-white-50");
+        titleParagraph.classList.add("text-white");
+
+        artistParagraph.textContent = selectedData.artist;
+        titleParagraph.textContent = selectedData.title;
+
+        playButton.className = "btn playButton";
+        playButton.setAttribute("data-src", selectedData.audio);
+        playButton.innerHTML = `<i class="fas fa-play" style="color: #e4e7ec;"></i>`;
+        playButton.addEventListener("click", playSong);
+
+        stopButton.className = "btn stopButton";
+        stopButton.setAttribute("data-src", selectedData.audio);
+        stopButton.innerHTML = `<i class="fas fa-stop" style="color: #e4e7ec;"></i>`;
+
+        xBtn.innerHTML = `<i class="fa-solid fa-x"></i>`;
+        xBtn.classList.add("xbtn");
+
+        function playSong() {
+          const previewUrl = this.getAttribute("data-src");
+          const selectedArtist = this.previousSibling.innerText;
+
+          const selectedImage =
+            this.parentElement.querySelector(".img-small").src;
+
+          console.log(previewUrl);
+
+          document.getElementById("selectedArtist").innerText = selectedArtist;
+          document.getElementById("selectedImage").src = selectedImage;
+        }
+
+        div.className = "box-shadow fontsize fixlength";
+        div.appendChild(xBtn);
+        div.appendChild(img);
+        div.appendChild(artistParagraph);
+        div.appendChild(titleParagraph);
+        div.appendChild(playButton);
+        div.appendChild(stopButton);
+
         displayDiv.appendChild(div);
+      });
+
+      const playButtons = document.querySelectorAll(".playButton");
+      const stopButtons = document.querySelectorAll(".stopButton");
+      const audioPlayer = document.getElementById("audioPlayer");
+
+      playButtons.forEach((playButton, index) => {
+        playButton.addEventListener("click", function () {
+          const audioSrc = selectedDataArray[index].audio;
+          audioPlayer.src = audioSrc;
+          audioPlayer.volume = 0.02;
+          audioPlayer.play();
+        });
+      });
+
+      stopButtons.forEach((stopButton) => {
+        stopButton.addEventListener("click", function () {
+          audioPlayer.pause();
+        });
       });
 
       console.log(

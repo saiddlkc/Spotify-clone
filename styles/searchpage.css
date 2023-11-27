@@ -248,4 +248,24 @@ a:hover {
 .lieb {
   color: white;
   font-size: 16px;
+}
+
+audio {
+  margin-top: 10px;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.xbtn {
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  padding: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin-left: 200px;
 }/*# sourceMappingURL=searchpage.css.map */
