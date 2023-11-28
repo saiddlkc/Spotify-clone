@@ -228,7 +228,7 @@ a:hover {
   height: 1026px;
 }
 
-@media screen and (max-width: 559px) {
+@media screen and (max-width: 650px) {
   .noney {
     display: none;
   }

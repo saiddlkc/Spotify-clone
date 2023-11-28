@@ -1,5 +1,4 @@
 import keys from "../key.js";
-const input = document.getElementById("suche");
 
 let selectedBtn = null;
 
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const playBtn = document.createElement("button");
         const stopBtn = document.createElement("BUTTON");
         const favBtn = document.createElement("BUTTON");
-
         myH.innerText = song.title;
         myP.innerText = song.artist.name;
         myImg.setAttribute("src", song.album.cover_medium);
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
         miniContainer.classList.add("fixlength");
         miniContainer.appendChild(stopBtn);
         miniContainer.appendChild(favBtn);
-
         container.appendChild(miniContainer);
       });
       const dynamicFavBtns = document.querySelectorAll(".fav-btn");
@@ -128,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selectedBtn !== clickedBtn) {
       selectedBtn = clickedBtn;
       clickedBtn.style.backgroundColor = "green";
-
+      //  Button wird grün gefärbt und Elemente werden gepickt
       const selectedArtist =
         clickedBtn.parentElement.querySelector("p").innerText;
       const selectedTitle =
@@ -138,11 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
         .querySelector("button")
         .getAttribute("data-src");
 
-      // Abrufen der vorhandenen Daten aus dem Local Storage oder Initialisieren eines leeren Arrays
+      // Elemente werden aus Local Storage oder gezogen und Leere Array erstellt damit newSelection hinzugefügt wird
       const storedData = localStorage.getItem("selectedData");
       const existingData = storedData ? JSON.parse(storedData) : [];
 
-      // Hinzufügen der neuen Auswahl zu den vorhandenen Daten
+      // Hinzufügen der Data
       const newSelection = {
         artist: selectedArtist,
         title: selectedTitle,
