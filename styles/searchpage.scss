@@ -244,3 +244,16 @@ audio {
 .cursor-none:focus {
   background-color: hotpink;
 }
+audio::-webkit-media-controls-panel {
+  background-color: rgb(159, 155, 155);
+  border: solid rgb(250, 248, 248) 3px;
+}
+// audio {
+// }
+.favBtn {
+  background-color: green;
+  width: 50px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}

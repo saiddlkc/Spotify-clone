@@ -60,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
         miniContainer.classList.add("box-shadow");
         miniContainer.classList.add("fontsize");
         miniContainer.classList.add("fixlength");
+        miniContainer.classList.add("mini-container");
+        miniContainer.setAttribute("id", song.id);
         miniContainer.appendChild(stopBtn);
         miniContainer.appendChild(favBtn);
         container.appendChild(miniContainer);
@@ -78,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     const searchArea = input.value;
     fetchData(searchArea);
+    setTimeout(checkLike, 300);
   });
 
   input.addEventListener("keydown", function (e) {
@@ -126,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
       selectedBtn = clickedBtn;
       clickedBtn.style.backgroundColor = "green";
       //  Button wird grün gefärbt und Elemente werden gepickt
+      const selectedId = clickedBtn.parentElement.getAttribute("id");
       const selectedArtist =
         clickedBtn.parentElement.querySelector("p").innerText;
       const selectedTitle =
@@ -135,12 +139,18 @@ document.addEventListener("DOMContentLoaded", function () {
         .querySelector("button")
         .getAttribute("data-src");
 
-      // Elemente werden aus Local Storage oder gezogen und Leere Array erstellt damit newSelection hinzugefügt wird
+      // Elemente werden aus Local Storage oder gezogen und Leere Array erstellt damit newSelection hinzugefügt werden kann
       const storedData = localStorage.getItem("selectedData");
-      const existingData = storedData ? JSON.parse(storedData) : [];
+      let existingData;
 
+      if (storedData) {
+        existingData = JSON.parse(storedData);
+      } else {
+        existingData = [];
+      }
       // Hinzufügen der Data
       const newSelection = {
+        id: selectedId,
         artist: selectedArtist,
         title: selectedTitle,
         image: selectedImage,
@@ -151,6 +161,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Speichern des aktualisierten Arrays im Local Storage
       localStorage.setItem("selectedData", JSON.stringify(existingData));
+    }
+  }
+  function checkLike() {
+    const storedData = localStorage.getItem("selectedData");
+    const dynamicFavBtns = document.querySelectorAll(".fav-btn");
+
+    if (storedData) {
+      const existingData = JSON.parse(storedData);
+
+      console.log(existingData);
+      dynamicFavBtns.forEach((btn) => {
+        const cardId = btn.parentElement.getAttribute("id");
+        const isLiked = existingData.some((song) => song.id === cardId);
+        console.log(isLiked);
+
+        if (isLiked) {
+          btn.classList.add("favBtn");
+          btn.classList.remove("fav-btn");
+        }
+      });
     }
   }
 });

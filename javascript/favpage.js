@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const titleParagraph = document.createElement("p");
         const playButton = document.createElement("button");
         const stopButton = document.createElement("button");
+        const favButton = document.createElement("button");
+
         img.src = selectedData.image;
         img.classList.add("img-small");
         artistParagraph.classList.add("text-white-50");
@@ -40,6 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         xBtn.innerHTML = `<i class="fa-solid fa-x"></i>`;
         xBtn.classList.add("xbtn");
+
+        favButton.innerHTML = `<i class="fas fa-heart" style="color: #e4e7ec;"></i>`;
+        favButton.className = "favBtn";
 
         xBtn.addEventListener("click", function () {
           div.remove();
@@ -77,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         div.appendChild(titleParagraph);
         div.appendChild(playButton);
         div.appendChild(stopButton);
+        div.appendChild(favButton);
 
         displayDiv.appendChild(div);
       });
