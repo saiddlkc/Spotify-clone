@@ -7,7 +7,7 @@
     <title>DASTIFY</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./../styles/lbs/podcast.css">
+    <link rel="stylesheet" href="./../styles/searchpage.css">
 </head>
 
 <body>
@@ -16,80 +16,102 @@
         <div class="d-flex flex-column">
             <!-- oben links die box für start usw -->
             <div class=" w-20">
-                <nav class="navsaid nav flex-column w-100">
-                    <a class="nav-link active text-white fs-5" aria-current="page" href="#">
-                        <i class="fa-brands fa-spotify mx-3"></i>DASTIFY
-                    </a>
-                    <a class="nav-link text-white opacity-50" href="#">
-                        <i class="fa-solid fa-house mx-3"></i>Start
-                    </a>
-                    <a class="nav-link text-white opacity-50" href="#">
-                        <i class="fa-solid fa-magnifying-glass mx-3"></i>Suchen
-                    </a>
-                </nav>
+                <div class="">
+                    <nav class="navsaid nav flex-column w-100">
+                        <a class="nav-link active text-white fs-5" aria-current="page" href="#">
+                            <i class="fa-brands fa-spotify mx-3"></i><span class="noney">DASTIFY</span>
+                        </a>
+                        <a class="nav-link text-white opacity-50" href="#">
+                            <i class="fa-solid fa-house mx-3"></i><span class="noney">Start</span>
+                        </a>
+                        <a class="nav-link text-white" href="#">
+                            <i class="fa-solid fa-magnifying-glass mx-3"></i><span class="noney">Suchen</span>
+                        </a>
+                    </nav>
+                </div>
             </div>
             <!-- unten links die box für Biblio liebsongs usw-->
             <div class="w-20 h-100 flex-wrap">
-                <nav class="navsaid nav flex-column w-20  height">
-                    </a>
-                    <a class="nav-link text-white opacity-50 mt-3" href="#">
-                        <i class="fa-solid fa-book mx-3"></i>Bibliothek
-                    </a>
-                    <a class="nav-link text-white opacity-50 mt-3" href="#">
-                        <i class="fa-solid fa-heart mx-3"></i>Lieblingssongs
-                    </a>
-                    <a class="nav-link text-white opacity-50 mt-3" href="#">
-                        <i class="fa-solid fa-headphones mx-3"></i>Playlists
-                    </a>
-                    <a class="nav-link text-white opacity-50 mt-3" href="#">
-                        <i class="fa-solid fa-bookmark mx-3"></i>Gespeichert
-                    </a>
-                    <!-- <div>
-                    <a href="" class="text-white opacity-50 fs-small">Rechtliches</a>
-                    <a href="" class="text-white opacity-50 fs-small">Datenschutz-Center</a>
-                    <a href="" class="text-white opacity-50 fs-small">Datenschutzrichtlinie</a>
-                    <a href="" class="text-white opacity-50 fs-small">Cookie-Einstellungen</a>
-                    <a href="" class="text-white opacity-50 fs-small">Über Werbung</a>
-                    <a href="" class="text-white opacity-50 fs-small">Bedinungshilfen</a>
-                    <a href="" class="text-white opacity-50 fs-small">Cookies</a>
-                </div> -->
-                </nav>
+                <nav class="navsaid nav flex-column w-20 mx">
+                    <div class="">
+                        <a class="nav-link text-white opacity-50 mt-3" href="#">
+                            <i class="fa-solid fa-book mx-3"></i><span class="noney">Bibliothek</span>
+                        </a>
+                        <a target="_blank" class="nav-link text-white opacity-50 mt-3" href="favpage.html">
+                            <i class="fa-solid fa-heart mx-3"></i><span class="noney">Lieblingssongs</span>
+                        </a>
+                        <a class="nav-link text-white opacity-50 mt-3" href="#">
+                            <i class="fa-solid fa-headphones mx-3"></i><span class="noney">Playlists</span>
+                        </a>
+                        <a class="nav-link text-white opacity-50 mt-3" href="#">
+                            <i class="fa-solid fa-bookmark mx-3"></i><span class="noney">Gespeichert</span>
+                        </a>
+                    </div>
 
+
+                </nav>
             </div>
         </div>
         <!-- div für die rechte seite  -->
-        <div class="d-flex flex-column w-80">
+        <div class="d-flex flex-column w-80" id="notfix">
             <div>
                 <nav class=" navbar w-100 py-0 justify-content-between" flex-column data-bs-theme="dark">
 
-                    <form class="d-flex align-items-center mx-5 " role="search">
+                    <form class="d-flex align-items-center mx-5" role="search">
                         <i class="fa-solid fa-magnifying-glass mx-3 lupe text-white"></i>
-                        <input class="suchfeld form-control me-3 " type="search" placeholder="Was hören wir heute?"
-                            aria-label="Search">
-                        <a class="reg a" href="">Registrieren</a>
-                        <a class="log a" href="">Anmelden</a>
+                        <input id="suche" class="suchfeld form-control me-3 " type="search"
+                            placeholder="Was hören wir heute?" aria-label="Search">
+
+                        <a class="none reg a" href="">Registrieren</a>
+                        <a class="none log a" href="">Anmelden</a>
                     </form>
                 </nav>
             </div>
-            <div class="mx-2 h-100">
-                <div id="episode-container">
-                    
+            <div id="scrollen" class="mx-2 mh">
+                <div class="scrollen navsaid  flex-column w-100 mh">
+                    <div id="ergebnisse" class="d-flex gap-2 justify-content-center
+                    "></div>
                 </div>
-                </div>
-            </div>
-            
             </div>
         </div>
     </div>
-    <footer>
+    <!-- MEDIA PLAYER IM FOOTER -->
+    <footer class="d-flex justify-content-between position-fixed align-items-center">
+        <footer class="d-flex justify-content-between">
+            <div class="d-flex justify-content-start media-all mb-1">
+                <img id="selectedImage" class="ms-3 mt-3 media-img"
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg" alt="">
+                <div class="ms-3 d-flex">
+                    <h3 id="selectedTitle" class="text-white"></h3>
+                    <p id="selectedArtist" class="text-white-50 fs-6 mt-4 text"></p>
+                </div>
+                <div class="none"><button class="back player player-btn"><i class="fs-6 fa-solid fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="d-flex mid">
+                <button class="back player player-btn"><i class="fa-solid fa-shuffle"></i></button>
 
-    </footer>
-    <script src="./../javascript/podcast.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/7a0ba6b588.js" crossorigin="anonymous"></script>
-    
+                <button id="back" class="back player player-btn"><i class=" fa-solid fa-backward"></i></button>
+                <button id="play" class="play player player-btn "><i class="fa-solid fa-play"></i></button>
+                <button id="for" class="for player player-btn "><i class="fa-solid fa-forward"></i></button>
+                <button class="back player player-btn"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="d-flex justify-content-end">
+                <div class="none">
+
+                    <button class="back player player-btn"><i class="fs-6 fa-solid fa-music"></i></button>
+                    <button class="back player player-btn"><i class="fs-6 fa-solid fa-desktop"></i></button>
+                    <button class="back player player-btn"><i class="fs-6 fa-solid fa-volume-low"></i></button>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7a0ba6b588.js" crossorigin="anonymous"></script>
+        <script type="module" src="./../javascript/searchpage.js"></script>
 </body>
 
 </html>
