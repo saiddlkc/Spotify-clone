@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f143cb399b.js" crossorigin="anonymous"></script>
+    <title>Registrieren-Dastify</title>
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid" style="background-color: #000000;">
+            <span class="navbar-brand mb-0 h1" style="color: white;"><i class="fa-brands fa-spotify"
+                    style="color: white;"></i>Dastify</span>
+        </div>
+    </nav>
+
+    <div class="progress-bar">
+        <div class="progress" style="width: 50%;"></div>
+      </div>
+    <form>
+        <nav class="navbar">
+            <div class="back-arrow">
+                <a href="/pages/pass.html"><i class="fa-solid fa-chevron-left"></i></a>
+            </div>
+            <div class="progress">
+                Schritt 2 von 3
+            </div>
+            <div class="description">
+                Erzähl uns etwas über dich
+            </div>
+        </nav>
+        <label for="fname">Name
+            <p>Dieser Name wird in deinem Profil angezeigt.</p>
+        </label><br>
+        <input type="text" id="fname" name="fname"> <br>
+
+        <label for="fname">Geburtsdatum
+            <p>Warum benötigen wir dein Geburtsdatum? <a href="https://www.spotify.com/de/legal/end-user-agreement/"
+                    target="_blank">Mehr Infos</a></p>
+        </label><br>
+
+        <input type="text" id="dateInput" placeholder="tt" />
+        <select id="monthInput">
+            <option value="" disabled selected>Monat</option>
+            <option value="Jan">January</option>
+            <option value="Feb">February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+        <input type="text" id="yearInput" placeholder="jjjj" />
+    </form>
+    <p>Geschlecht</p>
+    <p>Wir nutzen die Angaben zum Geschlecht, um unsere Inhaltsempfehlungen und Ads zu personalisieren.</p>
+    <form action="/action_page.php">
+          <input type="radio" id="männlich" name="geschlecht" value="Männlich">
+          <label for="männlich">Männlich</label>
+
+        <input type="radio" id="weiblich" name="geschlecht" value="Weiblich">
+          <label for="weiblich">Weiblich</label>
+
+        <input type="radio" id="divers" name="geschlecht" value="Divers">
+          <label for="divers">Divers</label>
+
+        <input type="radio" id="sonstiges" name="geschlecht" value="Sonstiges">
+          <label for="sonstiges">Sonstiges</label>
+
+        <input type="radio" id="minus" name="geschlecht" value="Möchte ich nicht angeben">
+          <label for="minus">Möchte ich nicht angeben
+        </label><br>
+
+        <input type="submit" value="Weiter">
+    </form>
+
+    <footer>
+        <p>
+            This site is protected by reCAPTCHA and the Google
+            Privacy Policy and Terms of Service apply.
+        </p>
+    </footer>
+    <script src="/javascript/form.js"></script>
+</body>
+
+</html>

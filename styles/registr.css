@@ -1,0 +1,101 @@
+body {
+  background: rgb(24, 23, 23);
+}
+body .container-fluid {
+  background: rgb(24, 23, 23);
+  padding: 30px 35px;
+}
+body .container-fluid span {
+  font-size: 25px;
+}
+body .container-fluid span a {
+  text-decoration: none;
+  color: white;
+  cursor: default;
+}
+body .container-fluid span a i {
+  font-size: 35px;
+  padding: 0px 5px;
+}
+body main {
+  height: 100vh;
+  background: rgb(24, 23, 23);
+}
+body main .card {
+  background: rgb(24, 23, 23);
+  border: 0px;
+}
+body main .card .form-label {
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
+body main .card #username {
+  background-color: rgba(128, 128, 128, 0.164);
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+body main .card #password {
+  background-color: rgba(128, 128, 128, 0.164);
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+body main .card .text {
+  width: 300px;
+  height: 50px;
+  display: none;
+  margin-top: 7px;
+}
+body main .card .text i {
+  color: red;
+  padding-right: 5px;
+}
+body main .card .text p {
+  color: red;
+  font-size: 13px;
+}
+body main .card button[type=submit].btn-success {
+  background-color: #1db954;
+  border: none;
+}
+body main .card .anmelden-btn {
+  background-color: #1db954;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 50px;
+  padding: 10px;
+  margin-top: 20px;
+}
+body main .card hr {
+  color: white;
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+body main .card a {
+  color: white;
+}
+body main .card a .card-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgb(78, 78, 78);
+  border-radius: 25px;
+  width: 300px;
+  height: 50px;
+}
+body main .card a .card-logo img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+body main .card a .card-logo p {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  color: white;
+}/*# sourceMappingURL=registr.css.map */

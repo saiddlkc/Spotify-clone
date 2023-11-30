@@ -1,0 +1,133 @@
+body {
+    background: rgb(24, 23, 23);
+
+    .container-fluid {
+        background: rgb(24, 23, 23);
+        padding: 30px 35px;
+
+        span {
+            font-size: 25px;
+
+            a {
+                text-decoration: none;
+                color: white;
+                cursor: default;
+
+                i {
+                    font-size: 35px;
+                    padding: 0px 5px;
+                }
+            }
+
+        }
+    }
+
+    main {
+        height: 100vh;
+        background: rgb(24, 23, 23);
+
+        .card {
+            background: rgb(24, 23, 23);
+            border: 0px;
+
+
+            .form-label {
+                color: white;
+                padding-top: 15px;
+                padding-bottom: 0px;
+            }
+
+            #username {
+                background-color: rgba(128, 128, 128, 0.164);
+                border: 1px solid gray;
+                border-radius: 5px;
+
+            }
+
+            #password {
+                background-color: rgba(128, 128, 128, 0.164);
+                border: 1px solid gray;
+                border-radius: 5px;
+
+            }
+
+            .text {
+                width: 300px;
+                height: 50px;
+                display: none;
+                margin-top: 7px;
+
+                i {
+                    color: red;
+                    padding-right: 5px;
+                }
+
+                p {
+                    color: red;
+                    // width: 30vh;
+                    // height: 100vw;
+                    font-size: 13px;
+
+                }
+            }
+
+
+            button[type="submit"].btn-success {
+                background-color: #1db954;
+                border: none;
+            }
+
+            .anmelden-btn {
+                background-color: #1db954;
+                color: black;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                border-radius: 50px;
+                padding: 10px;
+                margin-top: 20px;
+            }
+
+
+            hr {
+                color: white;
+                margin-left: 500px;
+                margin-right: 500px;
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+
+            a {
+                color: white;
+
+                .card-logo {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    border: 1px solid rgb(78, 78, 78);
+                    border-radius: 25px;
+                    width: 300px;
+                    height: 50px;
+
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 10px;
+                    }
+
+                    p {
+                        margin: 0;
+                        flex: 1;
+                        text-align: center;
+                        color: white;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}

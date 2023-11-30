@@ -2,13 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f143cb399b.js" crossorigin="anonymous"></script>
+
+  <title>Dastify</title>
 </head>
 
 <body>
 
+  <header>
+    <nav class="navbar bg-body-tertiary p-0">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"><a href="http://127.0.0.1:5500/pages/searchpage.html"><i
+              class="fa-brands fa-spotify" style="color: white;"></i>Dastify</a></span>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="vh-100 ">
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="mt-4">
+          <!-- <div class="col-12 col-md-8 col-lg-6 col-xl-5"> -->
+          <div class="card">
+            <div class="card-body text-center">
+
+              <h3 class="mb-5">Bei Spotify anmelden</h3>
+
+              <!-- <button class="btn btn-lg btn-block btn-primary mb-2" type="submit">
+                Weiter mit Google</button>
+              <button class="btn btn-lg btn-block btn-primary mb-2" type="submit">Weiter mit Facebook</button>
+              <button class="btn btn-lg btn-block btn-primary mb-2" type="submit">Weiter mit Apple</button> -->
+
+              <div class="d-grid gap-2 col-md-6 offset-md-3">
+                <button class="btn card-logo" type="button"><img src="/img/google_logo_icon_169090.png"
+                    alt="Google Logo" class="fb-logo">
+                  <p>Weiter mit Google</p>
+                </button>
+                <button class="btn card-logo" type="button"><img src="/img/Facebook_Logo_(2019).png.webp"
+                    alt="Facebook Logo" class="fb-logo">
+                  <p>Weiter mit Facebook</p>
+                </button>
+                <button class="btn card-logo" type="button"><img src="/img/Apple_logo_white.svg.png" alt="Apple Logo"
+                    class="fb-logo">
+                  <p>Weiter mit Apple</p>
+                </button>
+              </div>
+
+              <hr>
+
+              <div class="container loginform">
+                <!-- <form id="loginForm">
+                  <div class="email mb-4">
+                    <label class="form-label" for="typeEmailX-2">E-Mail-Adresse oder Benutzername</label>
+                    <input type="email" id="username" class="form-control form-control-lg"
+                      placeholder="E-Mail-Adresse oder Benutzername" />
+
+                  </div>
+
+                  <div class="password mb-4">
+                    <label class="form-label" for="typePasswordX-2">Passwort</label>
+                    <input type="password" id="password" class="form-control form-control-lg" placeholder="Passwort" />
+                  </div>
+                </form> -->
+
+
+                <!-- <form id="loginForm" class="custom-form"> -->
+
+                <div class="mb-3">
+                  <label class="form-label" for="username">E-Mail-Adresse oder Benutzername</label>
+                  <input type="email" id="username" class="form-control" placeholder="E-Mail-Adresse oder Benutzername">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label" for="password">Passwort</label>
+                  <input type="password" id="password" class="form-control" placeholder="Passwort">
+                </div>
+                <!-- <div class="form-check d-flex justify-content-start mb-4">
+                    <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                    <label class="form-check-label" for="form1Example3"> Remember password </label>
+                  </div> -->
+
+                <div class="form-check form-switch pt-2 pb-4">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Benutzername speichern</label>
+                </div>
+                <button type="submit" class="btn btn-success">Anmelden</button>
+
+                <!-- </form> -->
+
+
+                <!-- <button class="btn btn-primary btn-lg btn-block" type="submit">Anmelden</button>
+              </div> -->
+
+                <p class="p-3"><a href="#">Passwort vergessen?</a></p>
+
+                <hr>
+                <p>Du hast kein Konto?<a href="/pages/registr.html">Bei Spotify registrieren</a></p>
+              </div>
+            </div>
+          
+          <!-- </div> -->
+        </div>
+      </div>
+  </section>
+
+  <footer>
+    <p class="text-center"> Diese Website ist mit
+      reCAPTCHA geschützt. Es gelten die Datenschutzrichtlinie und Nutzungsbedingungen von Google.</p>
+  </footer>
+
+  <script src="javascript/index.js">
+
+  </script>
 </body>
 
 </html>
