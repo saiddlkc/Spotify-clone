@@ -85,7 +85,6 @@ let music = [
 
 
 // ForEach
-
 music.forEach((genr) => {
     const right = document.getElementById("boxRight");
     console.log(right);
@@ -111,9 +110,6 @@ music.forEach((genr) => {
 
 
 
-
-  
-
     //                    Img
     const img = document.createElement("img")
     console.log(img);
@@ -124,8 +120,6 @@ music.forEach((genr) => {
     //                      Genre
     const genre = document.createElement("li")
     genre.style.color = "white"
-
-
     img.src = genr.picture
     genre.innerText = `${genr.name}`;
     div.id = genr.id
@@ -137,19 +131,11 @@ music.forEach((genr) => {
     playlist.appendChild(div)
     right.appendChild(playlist)
 
-
 });
-
-
-
-
-
-
 
 // für 1 
 // const filterResult = array.filter((item)=> item.id == 0)
 // console.log(filterResult);
-
 
 const selectedGenre = music.find(item => item.name === "Alle");
 console.log(selectedGenre);

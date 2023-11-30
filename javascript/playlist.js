@@ -1,26 +1,15 @@
-
-
-
-const playlist = document.querySelectorAll(".playlist");
+const playlist = document.querySelector(".playlist");
+console.log(playlist);
+const divP = document.createElement("div")
+console.log(divP);
+divP.style.display ="flex"
 
 console.log(playlist);
 
-const resu = document.createElement("div");
-const li = document.createElement("li");
-
-const playl = playlist.tracks.data.forEach((play) => {
- track.title
-   track.artist.name
- track.album.title
-
-})
 
 
-
-
- async function playlistSee() {
- 
-    // Fetch Rock
+async function playlistSee() {
+ // Fetch Rock
     const url = 'https://deezerdevs-deezer.p.rapidapi.com/playlist/5';
     const options = {
         method: 'GET',
@@ -33,7 +22,26 @@ const playl = playlist.tracks.data.forEach((play) => {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
+
         console.log(result);
+        // Box
+     
+    result.tracks.data.map((music)=>{
+
+        const li = document.createElement("li")
+    
+        li.innerText = music.title
+        const img =  document.createElement("img")
+       
+        img.src = music.album.cover
+
+  
+    playlist.appendChild(img)
+    playlist.appendChild(li)
+
+
+    })
+        
     } catch (error) {
         console.error(error);
     }
