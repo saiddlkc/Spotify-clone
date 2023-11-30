@@ -1,5 +1,4 @@
 import keys from "../key.js";
-const input = document.getElementById("suche");
 
 let selectedBtn = null;
 
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const playBtn = document.createElement("button");
         const stopBtn = document.createElement("BUTTON");
         const favBtn = document.createElement("BUTTON");
-        console.log(song);
         myH.innerText = song.title;
         myP.innerText = song.artist.name;
         myImg.setAttribute("src", song.album.cover_medium);
@@ -62,9 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
         miniContainer.classList.add("box-shadow");
         miniContainer.classList.add("fontsize");
         miniContainer.classList.add("fixlength");
+        miniContainer.classList.add("mini-container");
+        miniContainer.setAttribute("id", song.id);
         miniContainer.appendChild(stopBtn);
         miniContainer.appendChild(favBtn);
-
         container.appendChild(miniContainer);
       });
       const dynamicFavBtns = document.querySelectorAll(".fav-btn");
@@ -81,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     const searchArea = input.value;
     fetchData(searchArea);
+    setTimeout(checkLike, 300);
   });
 
   input.addEventListener("keydown", function (e) {
@@ -122,91 +122,65 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function playing() {
-    let playerBtn = document.getElementById("play");
-    let isPlaying = false;
-
-    if (playerBtn) {
-      playerBtn.addEventListener("click", function () {
-        if (isPlaying) {
-          playerBtn.innerHTML = `<i class="fas fa-play"></i>`;
-          playSong();
-        } else {
-          playerBtn.innerHTML = `<i class="fas fa-stop"></i>`;
-          stopSong();
-        }
-        isPlaying = !isPlaying;
-      });
-    }
-  }
-
-  playing();
-
-  // function handleClick(e) {
-  //   const clickedBtn = e.currentTarget;
-
-  //   if (selectedBtn !== clickedBtn) {
-  //     if (selectedBtn) {
-  //       selectedBtn.style.backgroundColor = "green";
-  //     }
-  //     selectedBtn = clickedBtn;
-  //     clickedBtn.style.backgroundColor = "green";
-
-  //     // Artist, Title und Image aus den Vorgängerelementen abrufen
-  //     const selectedArtist =
-  //       clickedBtn.parentElement.querySelector("p").innerText;
-  //     const selectedTitle =
-  //       clickedBtn.parentElement.querySelector("h4").innerText;
-  //     const selectedImage = clickedBtn.parentElement.querySelector("img").src;
-
-  //     // Überprüfen, ob Artist und Title nicht leer sind, bevor sie gespeichert werden
-  //     if (selectedArtist && selectedTitle) {
-  //       const selectedData = {
-  //         artist: selectedArtist,
-  //         title: selectedTitle,
-  //         image: selectedImage,
-  //       };
-
-  //       // Speichern der Daten im Local Storage
-  //       localStorage.setItem("selectedData", JSON.stringify(selectedData));
-  //     }
-  //   }
-  // }
   function handleClick(e) {
     const clickedBtn = e.currentTarget;
 
     if (selectedBtn !== clickedBtn) {
-      if (selectedBtn) {
-        selectedBtn.style.backgroundColor = "green";
-      }
       selectedBtn = clickedBtn;
       clickedBtn.style.backgroundColor = "green";
-
-      // Artist, Title und Image aus den Vorgängerelementen abrufen
+      //  Button wird grün gefärbt und Elemente werden gepickt
+      const selectedId = clickedBtn.parentElement.getAttribute("id");
       const selectedArtist =
         clickedBtn.parentElement.querySelector("p").innerText;
       const selectedTitle =
         clickedBtn.parentElement.querySelector("h4").innerText;
       const selectedImage = clickedBtn.parentElement.querySelector("img").src;
-      const selectedButton =
-        clickedBtn.parentElement.querySelector("button").src;
+      const selectedAudio = clickedBtn.parentElement
+        .querySelector("button")
+        .getAttribute("data-src");
 
-      // Abrufen der vorhandenen Daten aus dem Local Storage oder Initialisieren eines leeren Arrays
+      // Elemente werden aus Local Storage oder gezogen und Leere Array erstellt damit newSelection hinzugefügt werden kann
       const storedData = localStorage.getItem("selectedData");
-      const existingData = storedData ? JSON.parse(storedData) : [];
+      let existingData;
 
-      // Hinzufügen der neuen Auswahl zu den vorhandenen Daten
+      if (storedData) {
+        existingData = JSON.parse(storedData);
+      } else {
+        existingData = [];
+      }
+      // Hinzufügen der Data
       const newSelection = {
+        id: selectedId,
         artist: selectedArtist,
         title: selectedTitle,
         image: selectedImage,
-        audio: selectedButton,
+        audio: selectedAudio,
       };
 
       existingData.push(newSelection);
 
       // Speichern des aktualisierten Arrays im Local Storage
       localStorage.setItem("selectedData", JSON.stringify(existingData));
+    }
+  }
+  function checkLike() {
+    const storedData = localStorage.getItem("selectedData");
+    const dynamicFavBtns = document.querySelectorAll(".fav-btn");
+
+    if (storedData) {
+      const existingData = JSON.parse(storedData);
+
+      console.log(existingData);
+      dynamicFavBtns.forEach((btn) => {
+        const cardId = btn.parentElement.getAttribute("id");
+        const isLiked = existingData.some((song) => song.id === cardId);
+        console.log(isLiked);
+
+        if (isLiked) {
+          btn.classList.add("favBtn");
+          btn.classList.remove("fav-btn");
+        }
+      });
     }
   }
 });
