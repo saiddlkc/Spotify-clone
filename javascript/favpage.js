@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       console.log(
-        "Alle ausgewählten Daten erfolgreich angezeigt:",
+        "Alle ausgewählten Daten erfolgreich angezeigt: for Daniel",
         selectedDataArray
       );
     } catch (error) {
