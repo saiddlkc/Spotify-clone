@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.navsaid {
+  border-radius: 8px;
+  margin-top: 7px;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: rgba(47, 46, 46, 0.495);
+}
+
+.try {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.reg {
+  position: absolute;
+  right: 160px;
+  border: 2px solid rgb(9, 7, 7);
+  opacity: 70%;
+  padding: 10px 24px;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin-top: 3px;
+  font-weight: bold;
+}
+
+.log {
+  position: absolute;
+  right: 20px;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  padding: 10px 24px;
+  border: 2px solid white;
+  margin-top: 3px;
+  font-weight: bold;
+}
+
+.suchfeld {
+  border-radius: 40px;
+  border: 2px black solid;
+  padding-left: 43px;
+  text-align: start;
+  color: white;
+  background-color: rgba(47, 46, 46, 0.66);
+  width: 360px;
+  height: 50px;
+}
+
+.lupe {
+  position: absolute;
+  z-index: 10;
+}
+
+.height {
+  height: 100vh;
+  width: 100vw;
+}
+
+.fs-small {
+  font-size: smaller;
+}
+
+.w-20 {
+  width: 22vw;
+}
+
+.w-80 {
+  width: 78vw;
+}
+
+.box {
+  background-color: rgba(47, 46, 46, 0.495);
+}
+
+.h-99 {
+  height: 99.3%;
+}
+
+#ergebnisse {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fixlength {
+  width: 250px;
+  height: 400px;
+}
+
+.fontsize {
+  font-size: 1.2rem;
+}
+
+.img-small {
+  width: 99%;
+}
+
+.btn {
+  width: 60px;
+  height: 40px;
+  color: white;
+  background-color: rgba(4, 4, 5, 0.813);
+  margin-left: 5px;
+}/*# sourceMappingURL=searchpage.css.map */

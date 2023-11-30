@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/registr.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f143cb399b.js" crossorigin="anonymous"></script>
+  <title>Registrieren-Dastify</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-body-tertiary p-0">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"><a href="http://127.0.0.1:5500/pages/searchpage.html"><i
+              class="fa-brands fa-spotify" style="color: white;"></i>Dastify</a></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card container">
+      <div class="d-grid gap-2 col-6 mx-auto d-flex justify-content-center">
+
+        <form id="myForm" action="/action_page.php">
+
+          <label for="username" class="form-label">E-Mail-Adresse</label><br>
+
+          <input type="text" id="username" name="username" placeholder="example@mail.com" class="py-2 ps-3"><br>
+
+          <div class="text" id="error">
+            <p><i class="fa-solid fa-circle-exclamation"></i>Diese E-Mail-Adresse ist ungültig. Sie muss dieses Format haben: beispiel@e-mail.com</p>
+          </div>
+
+          <button class="btn anmelden-btn" type="button" onclick="checkEmail()">Weiter</button>
+
+        </form>
+
+      </div>
+      <hr>
+      
+      <div class=" d-flex justify-content-center">
+        <a
+          href="https://accounts.google.com/v3/signin/identifier?opparams=%253F&dsh=S1593896913%3A1701263202759619&access_type=offline&client_id=1046568431490-ij1gi5shcp2gtorls09frkc56d4mjbe2.apps.googleusercontent.com&o2v=2&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fgoogle%2Fredirect&response_type=code&scope=profile+email+openid&service=lso&state=AQCnPP%2FqZWlU7yLXR0VecHl7NpBT5rktv4aFV9u%2Bh21ygVzjjgWdcOf79AnHX%2FzkH%2FndSImtIGdIHCtb1UBmy4fT%2FR5MRdZOTesFaygMTBAa9v%2FCWbsIczA%2FhVQuNRJwmkwK3m3BXjP%2FPL6iuqL%2F%2FfLRQyMD9vVGBhh5eaWDRPMGMXNVk9rJU7Fb8QTTVLdo8vK2yZdo4UenemgRtNB9jEje4Pq3SrbKSOgXxFPOjx8MxjKiEPxKS%2BTM9BualX4FJ4tjZswaQKviQPwbqBQXvD2RqtAnhKaPASf%2BE00SJqANzgAIznYOUmCgvJyUmrrP8lzi3l%2FezbfqJpQTxXX0auNJTAFdU7bDMLdMmrk%3D&theme=glif&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMPStNbM2vtx5xHk2jkk01UE1-wObsNKFnORTimOgNVgO_G7xJMxrkbO6n-GljOoGqE-BnKlhMyyPTVnCpODdB1MyUaAi2fBnEUkS_mBbbnpggB2Jf6nXWMoG790aGTPF1oUtV9xsVrlaATfFN8MGfmNEWOgnC110EZldwzYRmLk5N5EP-1bIiW0TsXCdxk9EOVXPQMHHrXy8L9XSL0j_enmlpVEwmE1z2-vpyVxlQD4wCAXP8dGvHHu2PL8ZV1Iwg5zlL-j04JCxRPjzHrJCoIaSromI-E3DdtqDa-Kpo3sJSHTvi0JVfp_EtOYLBdaRBD9c3IbzdRgMXVB2EIvM60Q-ezFXmULZqZUEYziPObNeN46XI5AQ5Jg1Y4d-kMcJ68umE_lFGPeQh_Dg3HjLWeN43Rwwkbfwe0r1bIFkDY9P6xD3LJzLMkjhWUH59sjTJ3XV8nwryeNB8IeuKwcmcsan5ByS1nLpL0gd4GTPS-yYxu7EA%26as%3DS1593896913%253A1701263202759619%26client_id%3D1046568431490-ij1gi5shcp2gtorls09frkc56d4mjbe2.apps.googleusercontent.com%26theme%3Dglif%23&app_domain=https%3A%2F%2Faccounts.spotify.com&rart=ANgoxcfZgrkQNMF4eL1CXTRqwdZbB9CgE4GpZCShWdxV7LLrpZd4BzAaFiKzta_eFK3k1dsIGbbGqNMutLdnPrZyksLgQJZ52pbcfSXr4Yxp7ZLueu04cds" style="text-decoration: none;"><button
+            class="btn card-logo" type="button"><img src="/img/google_logo_icon_169090.png" alt="Google Logo">
+            <p>Weiter mit Google</p>
+          </button></a>
+      </div>
+
+      <div class="d-grid gap-2 col-6 mx-auto d-flex justify-content-center pt-2">
+        <a
+          href="https://www.facebook.com/login.php?skip_api_login=1&api_key=174829003346&kid_directed_site=0&app_id=174829003346&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv17.0%2Fdialog%2Foauth%3Fclient_id%3D174829003346%26state%3DAQAEoB8sXiEX796VAnGFZJOunNvSmpgFX9kK4HBPH0d4k5PPDwMX19VceuWYZ3H3c%252FzLyZQp7o5BAjrfyUMZIZcY40BnmB9lrQ8sUGC4LaenPLV2UctJe4l6V5xhfvWQuYstJ%252B%252BwR9FQ6zNE1POlXmLTyzeqAWWGYmUSJE6C0sxMzFC9oYRUS%252FpWYllsmwSkxGc%252FjgLdU1wDlvnBz%252BBWoeu5Th2kLuu6J9gn940oPt%252FD5oMdDJk4AuRyVh%252FqDKu2mlNl%252BsLXolMXAaZxcYcRwN4e7yhup9rDdmk2m8fKDYe33PM6oUtkcBCUfpJj38P1JFa4fumpMabEw5NDYjsY8gm2PmP4kaNhB%252BZbqBk%253D%26redirect_uri%3Dhttps%253A%252F%252Faccounts.spotify.com%252Flogin%252Ffacebook%252Fredirect%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dd40b6a18-6f86-4805-8bd5-351da68fd902%26tp%3Dunspecified&cancel_url=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Ffacebook%2Fredirect%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DAQAEoB8sXiEX796VAnGFZJOunNvSmpgFX9kK4HBPH0d4k5PPDwMX19VceuWYZ3H3c%252FzLyZQp7o5BAjrfyUMZIZcY40BnmB9lrQ8sUGC4LaenPLV2UctJe4l6V5xhfvWQuYstJ%252B%252BwR9FQ6zNE1POlXmLTyzeqAWWGYmUSJE6C0sxMzFC9oYRUS%252FpWYllsmwSkxGc%252FjgLdU1wDlvnBz%252BBWoeu5Th2kLuu6J9gn940oPt%252FD5oMdDJk4AuRyVh%252FqDKu2mlNl%252BsLXolMXAaZxcYcRwN4e7yhup9rDdmk2m8fKDYe33PM6oUtkcBCUfpJj38P1JFa4fumpMabEw5NDYjsY8gm2PmP4kaNhB%252BZbqBk%253D%23_%3D_&display=page&locale=de_DE&pl_dbl=0" style="text-decoration: none;"><button
+            class="btn card-logo" type="button"><img src="/img/Facebook_Logo_(2019).png.webp" alt="Facebook Logo">
+            <p>Weiter mit Facebook</p>
+          </button></a>
+      </div>
+      <hr>
+      <p class="d-flex justify-content-center" style="color: rgb(105, 105, 105);">Du hast bereits ein Konto? <a href="/exindex.html" class="ps-2">Melde dich hier an.</a></p>
+    </div>
+  </main>
+
+  <footer>This site is protected by reCAPTCHA and the Google
+    Privacy Policy and Terms of Service apply.</footer>
+
+
+    <script src="/javascript/registr.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f143cb399b.js" crossorigin="anonymous"></script>
+    <title>Registrieren-Dastify</title>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid" style="background-color: #000000;">
+          <span class="navbar-brand mb-0 h1" style="color: white;"><i class="fa-brands fa-spotify"
+              style="color: white;"></i>Dastify</span>
+        </div>
+      </nav>
+
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <h3 class="mb-5">Sign in</h3>
+      
+                  <div class="form-outline mb-4">
+                    <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
+                    <label class="form-label" for="typeEmailX-2">Email</label>
+                  </div>
+      
+                 
+                  <div class="form-check d-flex justify-content-start mb-4">
+                    <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                    <label class="form-check-label" for="form1Example3"> Remember password </label>
+                  </div>
+      
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+      
+                  <hr class="my-4">
+      
+                  <button class="btn btn-lg btn-block btn-primary" 
+                    type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
+                  <button class="btn btn-lg btn-block btn-primary mb-2" 
+                    type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="/javascript/registr.js"></script>
+</body>
+</html> -->
