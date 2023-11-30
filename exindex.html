@@ -26,27 +26,40 @@
     </header>
 
     <main>
-        <div class="card container-md mt-5">
+        <div class="card container mt-5">
             <h1 class="pt-5 pb-3 text-center">Bei Dastify anmelden</h1>
 
-            <div class="d-grid gap-2 col-6 mx-auto d-flex justify-content-center">
-               
-               <a href="https://accounts.google.com/v3/signin/identifier?opparams=%253F&dsh=S1593896913%3A1701263202759619&access_type=offline&client_id=1046568431490-ij1gi5shcp2gtorls09frkc56d4mjbe2.apps.googleusercontent.com&o2v=2&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fgoogle%2Fredirect&response_type=code&scope=profile+email+openid&service=lso&state=AQCnPP%2FqZWlU7yLXR0VecHl7NpBT5rktv4aFV9u%2Bh21ygVzjjgWdcOf79AnHX%2FzkH%2FndSImtIGdIHCtb1UBmy4fT%2FR5MRdZOTesFaygMTBAa9v%2FCWbsIczA%2FhVQuNRJwmkwK3m3BXjP%2FPL6iuqL%2F%2FfLRQyMD9vVGBhh5eaWDRPMGMXNVk9rJU7Fb8QTTVLdo8vK2yZdo4UenemgRtNB9jEje4Pq3SrbKSOgXxFPOjx8MxjKiEPxKS%2BTM9BualX4FJ4tjZswaQKviQPwbqBQXvD2RqtAnhKaPASf%2BE00SJqANzgAIznYOUmCgvJyUmrrP8lzi3l%2FezbfqJpQTxXX0auNJTAFdU7bDMLdMmrk%3D&theme=glif&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMPStNbM2vtx5xHk2jkk01UE1-wObsNKFnORTimOgNVgO_G7xJMxrkbO6n-GljOoGqE-BnKlhMyyPTVnCpODdB1MyUaAi2fBnEUkS_mBbbnpggB2Jf6nXWMoG790aGTPF1oUtV9xsVrlaATfFN8MGfmNEWOgnC110EZldwzYRmLk5N5EP-1bIiW0TsXCdxk9EOVXPQMHHrXy8L9XSL0j_enmlpVEwmE1z2-vpyVxlQD4wCAXP8dGvHHu2PL8ZV1Iwg5zlL-j04JCxRPjzHrJCoIaSromI-E3DdtqDa-Kpo3sJSHTvi0JVfp_EtOYLBdaRBD9c3IbzdRgMXVB2EIvM60Q-ezFXmULZqZUEYziPObNeN46XI5AQ5Jg1Y4d-kMcJ68umE_lFGPeQh_Dg3HjLWeN43Rwwkbfwe0r1bIFkDY9P6xD3LJzLMkjhWUH59sjTJ3XV8nwryeNB8IeuKwcmcsan5ByS1nLpL0gd4GTPS-yYxu7EA%26as%3DS1593896913%253A1701263202759619%26client_id%3D1046568431490-ij1gi5shcp2gtorls09frkc56d4mjbe2.apps.googleusercontent.com%26theme%3Dglif%23&app_domain=https%3A%2F%2Faccounts.spotify.com&rart=ANgoxcfZgrkQNMF4eL1CXTRqwdZbB9CgE4GpZCShWdxV7LLrpZd4BzAaFiKzta_eFK3k1dsIGbbGqNMutLdnPrZyksLgQJZ52pbcfSXr4Yxp7ZLueu04cds"  ><button class="btn card-logo" type="button"><img src="/img/google_logo_icon_169090.png"
-                alt="Google Logo">
-            <p>Weiter mit Google</p>
-        </button></a>
+            <div id="errorText">
+                <p>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Der Benutzername oder das Passwort ist falsch.
+                </p>
             </div>
             
-            <div class="d-grid gap-2 col-6 mx-auto d-flex justify-content-center pt-2">
-                <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=174829003346&kid_directed_site=0&app_id=174829003346&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv17.0%2Fdialog%2Foauth%3Fclient_id%3D174829003346%26state%3DAQAEoB8sXiEX796VAnGFZJOunNvSmpgFX9kK4HBPH0d4k5PPDwMX19VceuWYZ3H3c%252FzLyZQp7o5BAjrfyUMZIZcY40BnmB9lrQ8sUGC4LaenPLV2UctJe4l6V5xhfvWQuYstJ%252B%252BwR9FQ6zNE1POlXmLTyzeqAWWGYmUSJE6C0sxMzFC9oYRUS%252FpWYllsmwSkxGc%252FjgLdU1wDlvnBz%252BBWoeu5Th2kLuu6J9gn940oPt%252FD5oMdDJk4AuRyVh%252FqDKu2mlNl%252BsLXolMXAaZxcYcRwN4e7yhup9rDdmk2m8fKDYe33PM6oUtkcBCUfpJj38P1JFa4fumpMabEw5NDYjsY8gm2PmP4kaNhB%252BZbqBk%253D%26redirect_uri%3Dhttps%253A%252F%252Faccounts.spotify.com%252Flogin%252Ffacebook%252Fredirect%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dd40b6a18-6f86-4805-8bd5-351da68fd902%26tp%3Dunspecified&cancel_url=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Ffacebook%2Fredirect%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DAQAEoB8sXiEX796VAnGFZJOunNvSmpgFX9kK4HBPH0d4k5PPDwMX19VceuWYZ3H3c%252FzLyZQp7o5BAjrfyUMZIZcY40BnmB9lrQ8sUGC4LaenPLV2UctJe4l6V5xhfvWQuYstJ%252B%252BwR9FQ6zNE1POlXmLTyzeqAWWGYmUSJE6C0sxMzFC9oYRUS%252FpWYllsmwSkxGc%252FjgLdU1wDlvnBz%252BBWoeu5Th2kLuu6J9gn940oPt%252FD5oMdDJk4AuRyVh%252FqDKu2mlNl%252BsLXolMXAaZxcYcRwN4e7yhup9rDdmk2m8fKDYe33PM6oUtkcBCUfpJj38P1JFa4fumpMabEw5NDYjsY8gm2PmP4kaNhB%252BZbqBk%253D%23_%3D_&display=page&locale=de_DE&pl_dbl=0" ><button class="btn card-logo" type="button"><img src="/img/Facebook_Logo_(2019).png.webp"
-                    alt="Facebook Logo">
-                <p>Weiter mit Facebook</p>
-            </button></a>
+            <div class="d-grid gap-2 col-6 mx-auto d-flex justify-content-center">
+
+                <a
+                    href="https://accounts.google.com/v3/signin/identifier?opparams=%253F&dsh=S1593896913%3A1701263202759619&access_type=offline&client_id=1046568431490-ij1gi5shcp2gtorls09frkc56d4mjbe2.apps.googleusercontent.com&o2v=2&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fgoogle%2Fredirect&response_type=code&scope=profile+email+openid&service=lso&state=AQCnPP%2FqZWlU7yLXR0VecHl7NpBT5rktv4aFV9u%2Bh21ygVzjjgWdcOf79AnHX%2FzkH%2FndSImtIGdIHCtb1UBmy4fT%2FR5MRdZOTesFaygMTBAa9v%2FCWbsIczA%2FhVQuNRJwmkwK3m3BXjP%2FPL6iuqL%2F%2FfLRQyMD9vVGBhh5eaWDRPMGMXNVk9rJU7Fb8QTTVLdo8vK2yZdo4UenemgRtNB9jEje4Pq3SrbKSOgXxFPOjx8MxjKiEPxKS%2BTM9BualX4FJ4tjZswaQKviQPwbqBQXvD2RqtAnhKaPASf%2BE00SJqANzgAIznYOUmCgvJyUmrrP8lzi3l%2FezbfqJpQTxXX0auNJTAFdU7bDMLdMmrk%3D&theme=glif&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMPStNbM2vtx5xHk2jkk01UE1-wObsNKFnORTimOgNVgO_G7xJMxrkbO6n-GljOoGqE-BnKlhMyyPTVnCpODdB1MyUaAi2fBnEUkS_mBbbnpggB2Jf6nXWMoG790aGTPF1oUtV9xsVrlaATfFN8MGfmNEWOgnC110EZldwzYRmLk5N5EP-1bIiW0TsXCdxk9EOVXPQMHHrXy8L9XSL0j_enmlpVEwmE1z2-vpyVxlQD4wCAXP8dGvHHu2PL8ZV1Iwg5zlL-j04JCxRPjzHrJCoIaSromI-E3DdtqDa-Kpo3sJSHTvi0JVfp_EtOYLBdaRBD9c3IbzdRgMXVB2EIvM60Q-ezFXmULZqZUEYziPObNeN46XI5AQ5Jg1Y4d-kMcJ68umE_lFGPeQh_Dg3HjLWeN43Rwwkbfwe0r1bIFkDY9P6xD3LJzLMkjhWUH59sjTJ3XV8nwryeNB8IeuKwcmcsan5ByS1nLpL0gd4GTPS-yYxu7EA%26as%3DS1593896913%253A1701263202759619%26client_id%3D1046568431490-ij1gi5shcp2gtorls09frkc56d4mjbe2.apps.googleusercontent.com%26theme%3Dglif%23&app_domain=https%3A%2F%2Faccounts.spotify.com&rart=ANgoxcfZgrkQNMF4eL1CXTRqwdZbB9CgE4GpZCShWdxV7LLrpZd4BzAaFiKzta_eFK3k1dsIGbbGqNMutLdnPrZyksLgQJZ52pbcfSXr4Yxp7ZLueu04cds"><button
+                        class="btn card-logo" type="button"><img src="/img/google_logo_icon_169090.png"
+                            alt="Google Logo">
+                        <p>Weiter mit Google</p>
+                    </button></a>
             </div>
 
             <div class="d-grid gap-2 col-6 mx-auto d-flex justify-content-center pt-2">
-                <a href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&response_type=code&response_mode=form_post&scope=name%20email&state=AQARhH67qIO0vzsyXJ54B2cQvtQeVDsfup5A67Q4sXsEw0fzjrX7p4qqBYffuJPpArBuYO78ltX4MBhVA9Mu1WfQVkYgBAbFGD58UgXQ4ytKJqbzydZiXiDsabevk1t2QRH9n8PhvHBX50IH9O3Ck5%2FDjyXdfpKmAthZelzvwuDuneqAmuqSujcGh0b%2FEWWs7OGp%2B0iZ3AKJOjWFoomR%2B31stTymaSM84xIP0f%2F7MrrA5tp6fKRqQ%2Bxw%2BowqtjAKdKHPgfLsa1JFv61tX9bumUE%3D&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect">
-                    <button class="btn card-logo" type="button"><img src="/img/Apple_logo_white.svg.png" alt="Apple Logo">
+                <a
+                    href="https://www.facebook.com/login.php?skip_api_login=1&api_key=174829003346&kid_directed_site=0&app_id=174829003346&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv17.0%2Fdialog%2Foauth%3Fclient_id%3D174829003346%26state%3DAQAEoB8sXiEX796VAnGFZJOunNvSmpgFX9kK4HBPH0d4k5PPDwMX19VceuWYZ3H3c%252FzLyZQp7o5BAjrfyUMZIZcY40BnmB9lrQ8sUGC4LaenPLV2UctJe4l6V5xhfvWQuYstJ%252B%252BwR9FQ6zNE1POlXmLTyzeqAWWGYmUSJE6C0sxMzFC9oYRUS%252FpWYllsmwSkxGc%252FjgLdU1wDlvnBz%252BBWoeu5Th2kLuu6J9gn940oPt%252FD5oMdDJk4AuRyVh%252FqDKu2mlNl%252BsLXolMXAaZxcYcRwN4e7yhup9rDdmk2m8fKDYe33PM6oUtkcBCUfpJj38P1JFa4fumpMabEw5NDYjsY8gm2PmP4kaNhB%252BZbqBk%253D%26redirect_uri%3Dhttps%253A%252F%252Faccounts.spotify.com%252Flogin%252Ffacebook%252Fredirect%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dd40b6a18-6f86-4805-8bd5-351da68fd902%26tp%3Dunspecified&cancel_url=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Ffacebook%2Fredirect%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DAQAEoB8sXiEX796VAnGFZJOunNvSmpgFX9kK4HBPH0d4k5PPDwMX19VceuWYZ3H3c%252FzLyZQp7o5BAjrfyUMZIZcY40BnmB9lrQ8sUGC4LaenPLV2UctJe4l6V5xhfvWQuYstJ%252B%252BwR9FQ6zNE1POlXmLTyzeqAWWGYmUSJE6C0sxMzFC9oYRUS%252FpWYllsmwSkxGc%252FjgLdU1wDlvnBz%252BBWoeu5Th2kLuu6J9gn940oPt%252FD5oMdDJk4AuRyVh%252FqDKu2mlNl%252BsLXolMXAaZxcYcRwN4e7yhup9rDdmk2m8fKDYe33PM6oUtkcBCUfpJj38P1JFa4fumpMabEw5NDYjsY8gm2PmP4kaNhB%252BZbqBk%253D%23_%3D_&display=page&locale=de_DE&pl_dbl=0"><button
+                        class="btn card-logo" type="button"><img src="/img/Facebook_Logo_(2019).png.webp"
+                            alt="Facebook Logo">
+                        <p>Weiter mit Facebook</p>
+                    </button></a>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto d-flex justify-content-center pt-2">
+                <a
+                    href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&response_type=code&response_mode=form_post&scope=name%20email&state=AQARhH67qIO0vzsyXJ54B2cQvtQeVDsfup5A67Q4sXsEw0fzjrX7p4qqBYffuJPpArBuYO78ltX4MBhVA9Mu1WfQVkYgBAbFGD58UgXQ4ytKJqbzydZiXiDsabevk1t2QRH9n8PhvHBX50IH9O3Ck5%2FDjyXdfpKmAthZelzvwuDuneqAmuqSujcGh0b%2FEWWs7OGp%2B0iZ3AKJOjWFoomR%2B31stTymaSM84xIP0f%2F7MrrA5tp6fKRqQ%2Bxw%2BowqtjAKdKHPgfLsa1JFv61tX9bumUE%3D&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect">
+                    <button class="btn card-logo" type="button"><img src="/img/Apple_logo_white.svg.png"
+                            alt="Apple Logo">
                         <p>Weiter mit Apple</p>
                     </button>
                 </a>
@@ -57,7 +70,8 @@
             <div class="d-grid gap-2 col-6 mx-auto d-flex justify-content-center">
                 <form action="/action_page.php">
                     <label for="username" class="form-label">E-Mail-Adresse oder Benutzername</label><br>
-                    <input type="text" id="username"  name="username" placeholder="E-Mail-Adresse oder Benutzername" class="py-2 ps-3"><br>
+                    <input type="text" id="username" name="username" placeholder="E-Mail-Adresse oder Benutzername"
+                        class="py-2 ps-3"><br>
 
                     <label for="password" class="form-label">Passwort</label><br>
                     <input type="password" id="password" name="pwd" class="py-2 ps-3" placeholder="Passwort"><br>
@@ -67,15 +81,17 @@
                             checked>
                         <label class="form-check-label" for="flexSwitchCheckChecked">Benutzername speichern</label>
                     </div>
-                    <button class="btn anmelden-btn" type="button">Anmelden</button>
+                    <button class="btn anmelden-btn" type="button" onclick="checkLogin()">Anmelden</button>
                 </form>
             </div>
 
-            <p class="d-flex justify-content-center pt-4" style="text-decoration: underline;"><a href="#">Passwort vergessen?</a></p>
+            <p class="d-flex justify-content-center pt-4" style="text-decoration: underline;"><a href="#">Passwort
+                    vergessen?</a></p>
 
             <hr class="mx-5 mb-5">
 
-            <p class="d-flex justify-content-center">Du hast kein Konto? <a href="/pages/registr.html" class="ps-2" style="text-decoration: underline;"> Bei Spotify
+            <p class="d-flex justify-content-center">Du hast kein Konto? <a href="/pages/registr.html" class="ps-2"
+                    style="text-decoration: underline;" target="_blank"> Bei Spotify
                     registrieren</a></p>
         </div>
     </main>
