@@ -71,14 +71,7 @@ function allFieldsValid(name, date, month, year) {
 }
 
 function saveToLocalStorage(name, date, month, year) {
-    // const userData = {
-    //     name: name,
-    //     date: date,
-    //     month: month,
-    //     year: year
-    // };
-
-    // Сохраняем данные в localStorage
+   
     localStorage.setItem('userData', name);
 }
 
@@ -165,11 +158,6 @@ function checkForm() {
         yearInput.style.borderColor = "";
     }
 
-
-
-    // if (allFieldsValid()) {
-    //     window.location.href = "http://127.0.0.1:5500/pages/searchpage.html";
-    // }
 
     if (allFieldsValid(nameField.value, dateInput.value, monthInput.value, yearInput.value)) {
         saveToLocalStorage(nameField.value, dateInput.value, monthInput.value, yearInput.value);
