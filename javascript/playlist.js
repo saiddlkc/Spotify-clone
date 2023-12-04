@@ -16,10 +16,10 @@ divP.style.justifyContent = "end"
 divP.style.backgroundColor = " #121212"
 divP.style.flexWrap = "wrap"
 divP.style.width = "100%"
-divP.style.height = "7vh"
+divP.style.height = "8vh"
 
 const btn = document.querySelector(".btn")
-btn.style.margin = "25px 30px"
+btn.style.margin = "30px 30px"
 btn.style.border = "none"
 btn.style.color = "black"
 btn.style.display = "flex"
