@@ -1,0 +1,25 @@
+.playlist {
+margin-left: 300px;
+
+}
+
+.divCon{
+  margin-top: 10px;
+  display: flex;
+justify-content: space-between;
+  align-items: center;
+}
+
+.divCon:hover {
+background-color:#3a3a3aaf ;
+}
+
+.fixed {
+  position: fixed;
+
+}
+.fixed2 {
+  position: fixed;
+  margin-top: 140px;
+}
+
