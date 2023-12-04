@@ -1,8 +1,7 @@
-
 body {
     background: rgb(34, 34, 34);
     background: linear-gradient(180deg, rgba(34, 34, 34, 1) 10%, rgba(0, 0, 0, 1) 83%);
-    
+
 
     .container-fluid {
         background-color: black;
@@ -36,6 +35,36 @@ body {
             h1 {
                 color: white;
             }
+
+            #errorText {
+                // max-width: 500px;
+                height: 50px;
+                // display: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 15px;
+                background-color: red;
+                // margin-left: 300px;
+                
+
+                i {
+                    color: white;
+                    padding-right: 5px;
+                    font-size: 15px;
+                    margin-top: 15px;
+                    margin-left: 10px;
+                   
+                }
+
+                p {
+                   color: white;
+                   
+                    font-size: 15px;
+
+                }
+            }
+
 
             a {
                 text-decoration: none;
@@ -80,6 +109,7 @@ body {
                 background-color: rgba(128, 128, 128, 0.164);
                 border: 1px solid gray;
                 border-radius: 5px;
+                color: white;
 
             }
 
@@ -87,7 +117,7 @@ body {
                 background-color: rgba(128, 128, 128, 0.164);
                 border: 1px solid gray;
                 border-radius: 5px;
-               
+                color: white;
             }
 
             .form-check {

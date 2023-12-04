@@ -1,14 +1,183 @@
-.progress-bar {
-    width: 100%;
-    height: 20px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    overflow: hidden;
+body {
+  background: rgb(24, 23, 23);
+
+  .container-fluid {
+    background: rgb(24, 23, 23);
+    padding: 30px 35px;
+
+    span {
+      font-size: 25px;
+
+      a {
+        text-decoration: none;
+        color: white;
+        cursor: default;
+
+        i {
+          font-size: 35px;
+          padding: 0px 5px;
+        }
+      }
+    }
   }
-  
-  .progress {
-    height: 100%;
+
+  main {
+    height: 100vh;
+    background: rgb(24, 23, 23);
+
+    .card {
+      background: rgb(24, 23, 23);
+      border: 0px;
+      padding: 0px;
+
+      .progress {
+        width: 500px;
+        height: 2px;
+        background-color: gray;
+
+        .progress-bar {
+          background-color: rgb(4, 196, 4);
+        }
+      }
+
+      .back {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        color: gray;
+
+        a {
+          padding: 15px;
+
+          i {
+            text-decoration: none;
+            font-size: 25px;
+            color: gray;
+          }
+
+        }
+
+        .text {
+          padding: 0px;
+          margin: 0px;
+
+          p {
+            color: white;
+          }
+        }
+      }
+
+      .form-label {
+        color: white;
+        padding-top: 15px;
+        padding-bottom: 0px;
+      }
+
+      p {
+        color: gray;
+        font-size: 13px;
+        width: 270px;
+      }
+
+      .form-box {
+        background-color: rgba(128, 128, 128, 0.164);
+        border: 1px solid gray;
+        border-radius: 2px;
+      }
+
+      #dateInput {
+        width: 40px;
+        color: white;
+      }
+
+      #monthInput {
+        height: 30px;
+        margin-left: 5px;
+        background-color: rgba(128, 128, 128, 0.164);
+        color: white;
+
+        option {
+          // background-color: rgba(128, 128, 128, 0.164);
+          color: rgb(7, 7, 7);
+        }
+
+      }
+
+      #yearInput {
+        width: 90px;
+        margin-left: 5px;
+        color: white;
+      }
+
+
+      .geschlecht {
+        color: white;
+        font-size: 13px;
+      }
+
+      .error-message{
+        width: 270px;
+        height: 30px;
+        display: none;
+        margin-top: 7px;
+
+        i {
+            color: red;
+            padding-right: 5px;
+        }
+
+        p {
+            color: red;
+            // width: 30vh;
+            // height: 100vw;
+            font-size: 13px;
+
+        }
+      }
+    }
+  }
+
+  button[type="submit"].btn-success {
     background-color: #1db954;
-    border-radius: 10px;
-    transition: width 0.5s ease-in-out;
+    border: none;
   }
+
+  .anmelden-btn {
+    background-color: #1db954;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+
+  footer {
+    background-color: rgb(24, 23, 23);
+    padding: 0px;
+    color: rgb(156, 156, 156);
+    font-size: small;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+// .progress-bar {
+//     width: 100%;
+//     height: 20px;
+//     background-color: #f2f2f2;
+//     border-radius: 10px;
+//     overflow: hidden;
+//   }
+
+//   .progress {
+//     height: 100%;
+//     background-color: #1db954;
+//     border-radius: 10px;
+//     transition: width 0.5s ease-in-out;
+//   }
