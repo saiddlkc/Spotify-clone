@@ -1,4 +1,4 @@
-import keys from "../key.js";
+import keys from "../keys.js";
 
 let selectedBtn = null;
 
