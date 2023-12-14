@@ -34,11 +34,7 @@ body main .card #username {
   background-color: rgba(128, 128, 128, 0.164);
   border: 1px solid gray;
   border-radius: 5px;
-}
-body main .card #password {
-  background-color: rgba(128, 128, 128, 0.164);
-  border: 1px solid gray;
-  border-radius: 5px;
+  color: white;
 }
 body main .card .text {
   width: 300px;

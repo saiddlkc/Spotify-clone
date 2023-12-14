@@ -29,6 +29,25 @@ body main .card {
 body main .card h1 {
   color: white;
 }
+body main .card #errorText {
+  width: 500px;
+  height: 50px;
+  display: none;
+  margin-bottom: 15px;
+  background-color: red;
+  margin-left: 300px;
+}
+body main .card #errorText i {
+  color: white;
+  padding-right: 5px;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+body main .card #errorText p {
+  color: white;
+  font-size: 15px;
+}
 body main .card a {
   text-decoration: none;
 }
@@ -64,11 +83,13 @@ body main .card #username {
   background-color: rgba(128, 128, 128, 0.164);
   border: 1px solid gray;
   border-radius: 5px;
+  color: white;
 }
 body main .card #password {
   background-color: rgba(128, 128, 128, 0.164);
   border: 1px solid gray;
   border-radius: 5px;
+  color: white;
 }
 body main .card .form-check {
   margin-top: 15px;
