@@ -127,7 +127,8 @@ a {
 }
 
 .box-shadow {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   background-color: black;
 }
 
@@ -289,8 +290,8 @@ audio::-webkit-media-controls-panel {
 
 .favBtn {
   background-color: green;
-  width: 60px;
+  width: 50px;
   height: 40px;
   border: none;
   border-radius: 5px;
-}/*# sourceMappingURL=searchpage.css.map */
+} /*# sourceMappingURL=searchpage.css.map */
